@@ -41,6 +41,7 @@
 - [x] **Drag & Drop** - Reposicionamiento libre de paneles
 
 ### ✅ **COMPLETADO** - Plugins Integrados
+- [x] **🤖 Anti-AFK Emulation** (`anti_afk.py`) - Prevención automática de desconexiones por inactividad
 - [x] **🎯 Crosshair Overlay** (`crosshair.py`) - Mira personalizable con múltiples estilos
 - [x] **📊 FPS Counter** (`fps_counter.py`) - Contador en tiempo real con estadísticas
 - [x] **💻 CPU/GPU Monitor** (`cpu_gpu_monitor.py`) - Monitor de recursos del sistema
@@ -71,6 +72,14 @@
 ---
 
 ## 🔧 **EN DESARROLLO** - Características Avanzadas
+
+### ✅ **NUEVO - COMPLETADO**
+- [x] **🤖 Anti-AFK Emulation** - Prevención automática de desconexiones por inactividad
+  - ✅ Simulación inteligente de mouse y teclado
+  - ✅ Detección automática de juegos
+  - ✅ Configuración avanzada con whitelist/blacklist
+  - ✅ Características de seguridad y modo conservador
+  - ✅ UI completa con estado en tiempo real
 
 ### 🟡 **PARCIALMENTE IMPLEMENTADO**
 - [x] **Base de Plugins** - Sistema extensible funcionando
@@ -173,6 +182,23 @@ Características:
   ✅ Configuración de precisión
   ✅ Historial y logging
   ✅ Alertas de rendimiento bajo
+```
+
+### 🤖 **Anti-AFK Emulation** ✅
+```yaml
+Estado: COMPLETAMENTE FUNCIONAL - NUEVO
+Características:
+  ✅ Simulación inteligente de mouse (movimientos aleatorios mínimos)
+  ✅ Simulación de teclado (WASD, Space, teclas configurables)
+  ✅ Detección automática de juegos activos
+  ✅ Intervalos aleatorios configurables (30-60s por defecto)
+  ✅ Modo seguro (movimientos ±5 píxeles)
+  ✅ Whitelist/Blacklist de juegos específicos
+  ✅ Detección de actividad del usuario (pausa automática)
+  ✅ Configuración avanzada con múltiples opciones
+  ✅ UI en tiempo real con estado y countdown
+  ✅ Características de seguridad y parada de emergencia
+Uso: Previene desconexiones por AFK en juegos
 ```
 
 ### 💻 **CPU/GPU Monitor** ✅

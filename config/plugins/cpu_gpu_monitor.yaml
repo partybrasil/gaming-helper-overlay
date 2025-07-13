@@ -131,9 +131,9 @@ performance:
   low_impact_mode: false
   max_cpu_usage: 3
 show_cpu: true
-show_gpu: false
-show_memory: false
-show_network: false
+show_gpu: true
+show_memory: true
+show_network: true
 thresholds:
   cpu:
     critical: 85
