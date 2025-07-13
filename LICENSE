@@ -1,0 +1,128 @@
+# Gaming Helper Overlay - License
+
+## MIT License
+
+Copyright (c) 2024 Party Brasil
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Licenses
+
+This project uses several third-party libraries, each with their own licenses:
+
+### PySide6
+- **License**: LGPL 3.0
+- **Copyright**: The Qt Company Ltd.
+- **Website**: https://www.qt.io/qt-for-python
+- **License Text**: https://www.gnu.org/licenses/lgpl-3.0.html
+
+### psutil
+- **License**: BSD 3-Clause License
+- **Copyright**: Copyright (c) 2009, Jay Loden, Dave Daeschler, Giampaolo Rodola'
+- **Website**: https://github.com/giampaolo/psutil
+- **License Text**: https://github.com/giampaolo/psutil/blob/master/LICENSE
+
+### PyYAML
+- **License**: MIT License
+- **Copyright**: Copyright (c) 2017-2021 Ingy döt Net, Copyright (c) 2006-2016 Kirill Simonov
+- **Website**: https://pyyaml.org/
+- **License Text**: https://github.com/yaml/pyyaml/blob/master/LICENSE
+
+### requests
+- **License**: Apache License 2.0
+- **Copyright**: Copyright 2019 Kenneth Reitz
+- **Website**: https://requests.readthedocs.io/
+- **License Text**: https://github.com/psf/requests/blob/main/LICENSE
+
+---
+
+## Assets and Resources
+
+### Icons
+- Custom icons created specifically for this project
+- Some icons adapted from open-source icon libraries
+- All icons are either original work or properly licensed
+
+### Fonts
+- Default system fonts are used
+- No custom fonts are distributed with this software
+
+### Sounds
+- No sound files are included in the base distribution
+- Sound support is provided for user-added audio files
+
+---
+
+## Contribution License
+
+By contributing to this project, you agree that your contributions will be licensed under the same MIT License that covers the project. This ensures that the project remains open-source and freely available to the community.
+
+### Contributor Agreement
+When you submit code changes, you are agreeing to:
+1. License your contributions under the MIT License
+2. Confirm that you have the right to make the contribution
+3. Understand that your contributions may be redistributed
+
+---
+
+## Commercial Use
+
+This software is freely available for commercial use under the MIT License terms. You may:
+- Use the software in commercial products
+- Modify the software for commercial purposes
+- Distribute the software as part of commercial offerings
+- Sell products that include this software
+
+**Requirements for commercial use:**
+- Include the original license and copyright notice
+- Provide attribution to the original authors
+- Do not hold the authors liable for any issues
+
+---
+
+## Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+This means:
+- No warranty is provided with this software
+- Authors are not responsible for any damage or issues caused by the software
+- Use at your own risk and responsibility
+- No support is guaranteed, though community support may be available
+
+---
+
+## Contact for License Questions
+
+If you have questions about licensing, commercial use, or need special licensing arrangements, please contact:
+
+**Email**: contact@partybrasil.dev
+**GitHub**: [@partybrasil](https://github.com/partybrasil)
+
+---
+
+*Last updated: 2024*

@@ -1,0 +1,93 @@
+# Gaming Helper Overlay - Configuration File
+# Archivo de configuración principal de la aplicación
+
+# Configuración general de la aplicación
+app:
+  name: "Gaming Helper Overlay"
+  version: "1.0.0"
+  first_run: true
+  auto_start: false
+  minimize_to_tray: true
+  check_updates: true
+  language: "es"
+  startup_delay: 2.0
+
+# Configuración de la interfaz de usuario
+ui:
+  theme: "dark"  # dark, light, auto
+  transparency_enabled: true
+  always_on_top: false
+  glass_effect: true
+  animations: true
+  smooth_transitions: true
+  blur_background: true
+  custom_borders: true
+  border_color: "#3498db"
+  border_width: 2
+  font_family: "Segoe UI"
+  font_size: 12
+
+# Configuración del icono flotante
+floating_icon:
+  position:
+    x: 100
+    y: 100
+  size:
+    width: 50
+    height: 50
+  icon_path: "assets/icons/app_icon.png"
+  opacity: 0.8
+  always_on_top: true
+  draggable: true
+
+# Configuración del panel de control
+control_panel:
+  position:
+    x: 200
+    y: 200
+  size:
+    width: 800
+    height: 600
+  opacity: 0.95
+  always_on_top: false
+  remember_position: true
+  auto_hide: false
+
+# Configuración de plugins
+plugins:
+  enabled:
+    - crosshair
+    - fps_counter
+    - cpu_gpu_monitor
+  auto_load: true
+  auto_discover: true
+  check_updates: true
+
+# Configuración de rendimiento
+performance:
+  max_threads: 10
+  fps_limit: 60
+  low_cpu_mode: false
+  memory_limit: 512
+  thread_pool_size: 4
+
+# Configuración de logging
+logging:
+  level: "INFO"
+  log_to_file: true
+  log_to_console: false
+  max_file_size: "10MB"
+  backup_count: 5
+
+# Configuración de atajos de teclado globales
+keybinds:
+  toggle_overlay: "Ctrl+Shift+O"
+  toggle_control_panel: "Ctrl+Shift+C"
+  emergency_hide: "Ctrl+Shift+H"
+  low_cpu_mode: false
+  memory_limit_mb: 500
+
+hotkeys:
+  toggle_control_panel: "Ctrl+Shift+G"
+  toggle_all_panels: "Ctrl+Shift+A"
+  emergency_hide: "Ctrl+Shift+H"

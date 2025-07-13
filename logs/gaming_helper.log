@@ -1,0 +1,24 @@
+2025-07-13 19:32:05,949 - GamingHelperApp - INFO - Gaming Helper Overlay starting...
+2025-07-13 19:32:05,950 - GamingHelperApp - INFO - Initializing Gaming Helper Overlay...
+2025-07-13 19:32:05,955 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-13 19:32:05,959 - GamingHelperApp - ERROR - Failed to initialize application: Error calling Python override of QMainWindow::changeEvent(): 'PySide6.QtCore.QEvent' object has no attribute 'WindowStateChange'
+2025-07-13 19:32:33,509 - GamingHelperApp - INFO - Gaming Helper Overlay starting...
+2025-07-13 19:32:33,509 - GamingHelperApp - INFO - Initializing Gaming Helper Overlay...
+2025-07-13 19:32:33,513 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-13 19:32:34,135 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 19:32:34,141 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 19:32:34,146 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 19:32:34,146 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 19:32:34,154 - FloatingIcon - ERROR - Failed to load icon: 'FloatingIcon' object has no attribute 'icon_path'
+2025-07-13 19:32:34,164 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 19:32:34,164 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 19:32:34,165 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 19:32:34,165 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 19:32:34,165 - PluginManager - ERROR - Plugin 'crosshair' not available
+2025-07-13 19:32:34,165 - PluginManager - ERROR - Plugin 'fps_counter' not available
+2025-07-13 19:32:34,166 - PluginManager - ERROR - Plugin 'cpu_gpu_monitor' not available
+2025-07-13 19:32:34,171 - GamingHelperApp - INFO - Gaming Helper Overlay initialized successfully!
+2025-07-13 19:33:23,065 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 19:33:23,066 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 19:33:23,067 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 19:33:23,067 - PluginManager - INFO - Discovered 3 plugins
