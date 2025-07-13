@@ -4,6 +4,7 @@ Discovers, loads, and manages all plugins.
 """
 
 import importlib
+import importlib.util
 import inspect
 import logging
 from pathlib import Path
@@ -40,8 +41,9 @@ class BasePlugin(QObject):
         self.is_initialized = False
         self.panel_widget = None
         
-        # Plugin configuration
-        self.plugin_config = self.config_manager.get_plugin_config(self.name.lower().replace(" ", "_"))
+        # Plugin configuration - create safe filename
+        safe_name = self.name.lower().replace(" ", "_").replace("/", "_").replace("\\", "_")
+        self.plugin_config = self.config_manager.get_plugin_config(safe_name)
     
     def initialize(self) -> bool:
         """Initialize the plugin. Override in subclasses."""
@@ -115,8 +117,10 @@ class BasePlugin(QObject):
     
     def save_config(self) -> bool:
         """Save plugin configuration."""
+        # Create a safe filename by replacing problematic characters
+        safe_name = self.name.lower().replace(" ", "_").replace("/", "_").replace("\\", "_")
         return self.config_manager.save_plugin_config(
-            self.name.lower().replace(" ", "_"),
+            safe_name,
             self.plugin_config
         )
     
@@ -155,6 +159,17 @@ class PluginManager(QObject):
         
         # Plugin directory
         self.plugins_dir = Path(__file__).parent.parent / "plugins"
+    
+    def _get_plugin_config_name(self, plugin_name: str) -> str:
+        """Convert plugin display name to config name (safe filename)."""
+        return plugin_name.lower().replace(" ", "_").replace("/", "_").replace("\\", "_")
+    
+    def _find_plugin_by_config_name(self, config_name: str) -> str:
+        """Find plugin display name by config name."""
+        for plugin_name in self.available_plugins.keys():
+            if self._get_plugin_config_name(plugin_name) == config_name:
+                return plugin_name
+        return None
     
     def discover_plugins(self) -> List[str]:
         """Discover all available plugins."""
@@ -244,10 +259,11 @@ class PluginManager(QObject):
             
             plugin = self.loaded_plugins[plugin_name]
             if plugin.activate():
-                # Add to enabled plugins list
+                # Add to enabled plugins list using config name
+                config_name = self._get_plugin_config_name(plugin_name)
                 enabled_plugins = self.config_manager.get("plugins.enabled", [])
-                if plugin_name not in enabled_plugins:
-                    enabled_plugins.append(plugin_name)
+                if config_name not in enabled_plugins:
+                    enabled_plugins.append(config_name)
                     self.config_manager.set("plugins.enabled", enabled_plugins)
                 
                 return True
@@ -266,10 +282,11 @@ class PluginManager(QObject):
             
             plugin = self.loaded_plugins[plugin_name]
             if plugin.deactivate():
-                # Remove from enabled plugins list
+                # Remove from enabled plugins list using config name
+                config_name = self._get_plugin_config_name(plugin_name)
                 enabled_plugins = self.config_manager.get("plugins.enabled", [])
-                if plugin_name in enabled_plugins:
-                    enabled_plugins.remove(plugin_name)
+                if config_name in enabled_plugins:
+                    enabled_plugins.remove(config_name)
                     self.config_manager.set("plugins.enabled", enabled_plugins)
                 
                 return True
@@ -319,9 +336,14 @@ class PluginManager(QObject):
         """Load all enabled plugins from configuration."""
         enabled_plugins = self.config_manager.get("plugins.enabled", [])
         
-        for plugin_name in enabled_plugins:
-            if self.load_plugin(plugin_name):
-                self.activate_plugin(plugin_name)
+        for config_name in enabled_plugins:
+            # Find the actual plugin name from config name
+            plugin_name = self._find_plugin_by_config_name(config_name)
+            if plugin_name:
+                if self.load_plugin(plugin_name):
+                    self.activate_plugin(plugin_name)
+            else:
+                self.logger.warning(f"Plugin with config name '{config_name}' not found")
     
     def shutdown_all_plugins(self) -> None:
         """Shutdown all loaded plugins."""

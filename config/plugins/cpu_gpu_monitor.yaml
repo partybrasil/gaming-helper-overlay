@@ -1,201 +1,154 @@
-# CPU/GPU Monitor Plugin Configuration
-# Configuración para el monitor de recursos del sistema
-
-# Configuración general
-cpu_gpu_monitor:
-  # Plugin habilitado
+alerts:
+  cpu_high_usage:
+    duration: 10
+    enabled: true
+    threshold: 85
   enabled: true
-  visible: true
+  gpu_high_temp:
+    duration: 5
+    enabled: true
+    threshold: 80
+  memory_low:
+    duration: 3
+    enabled: true
+    threshold: 95
+  sound_alerts: false
+  system_notifications: true
+appearance:
+  background:
+    blur: true
+    color: '#1E1E1E'
+    enabled: true
+    opacity: 0.8
+  border:
+    color: '#333333'
+    corner_radius: 8
+    enabled: true
+    width: 1
+  colors:
+    cpu:
+      critical: '#F44336'
+      normal: '#4CAF50'
+      warning: '#FF9800'
+    gpu:
+      critical: '#F44336'
+      normal: '#2196F3'
+      warning: '#FF9800'
+    memory:
+      critical: '#F44336'
+      normal: '#9C27B0'
+      warning: '#FF9800'
+    network:
+      download: '#00BCD4'
+      upload: '#FF5722'
+  progress_bars:
+    animation: true
+    corner_radius: 4
+    height: 8
+    show_text: true
+    text_position: overlay
+  theme: modern
+cpu_gpu_monitor:
   auto_start: false
-  
-  # Posición y tamaño
   display:
-    position: "top_right"  # top_left, top_right, bottom_left, bottom_right, custom
     custom_x: 200
     custom_y: 50
-    width: 250
     height: 150
-    
-  # Configuración de actualización
-  update:
-    interval: 2000  # ms - Cada 2 segundos
-    smooth_updates: true
-    animation_duration: 300
-    
-  # Métricas a mostrar
+    position: top_right
+    width: 250
+  enabled: true
   metrics:
     cpu:
       enabled: true
-      show_percentage: true
-      show_temperature: true
       show_frequency: false
       show_per_core: false
-      
-    gpu:
-      enabled: true
       show_percentage: true
       show_temperature: true
-      show_memory: true
+    disk:
+      enabled: false
+      show_read_write: false
+      show_usage: true
+    gpu:
+      enabled: true
       show_frequency: false
-      
+      show_memory: true
+      show_percentage: true
+      show_temperature: true
     memory:
       enabled: true
-      show_usage_percentage: true
-      show_used_gb: true
       show_available_gb: false
       show_total_gb: false
-      
+      show_usage_percentage: true
+      show_used_gb: true
     network:
       enabled: false
       show_download: true
-      show_upload: true
       show_ping: false
-      
-    disk:
-      enabled: false
-      show_usage: true
-      show_read_write: false
-
-# Configuración visual
-appearance:
-  theme: "modern"  # modern, classic, minimal
-  
-  # Colores por tipo de métrica
-  colors:
-    cpu:
-      normal: "#4CAF50"    # Verde
-      warning: "#FF9800"   # Naranja
-      critical: "#F44336"  # Rojo
-    gpu:
-      normal: "#2196F3"    # Azul
-      warning: "#FF9800"   # Naranja
-      critical: "#F44336"  # Rojo
-    memory:
-      normal: "#9C27B0"    # Púrpura
-      warning: "#FF9800"   # Naranja
-      critical: "#F44336"  # Rojo
-    network:
-      download: "#00BCD4"  # Cian
-      upload: "#FF5722"    # Rojo profundo
-      
-  # Configuración de barras de progreso
-  progress_bars:
-    height: 8
-    corner_radius: 4
-    show_text: true
-    text_position: "overlay"  # overlay, side, below
-    animation: true
-    
-  # Fondo y bordes
-  background:
+      show_upload: true
+  update:
+    animation_duration: 300
+    interval: 2000
+    smooth_updates: true
+  visible: true
+game_specific:
+  Counter-Strike 2:
     enabled: true
-    color: "#1E1E1E"
-    opacity: 0.8
-    blur: true
-    
-  border:
+    position: bottom_left
+    show_per_core_cpu: true
+  Cyberpunk 2077:
     enabled: true
-    color: "#333333"
-    width: 1
-    corner_radius: 8
-
-# Umbrales de alerta
-thresholds:
-  cpu:
-    warning: 70    # %
-    critical: 85   # %
-    temp_warning: 70   # °C
-    temp_critical: 85  # °C
-    
-  gpu:
-    warning: 75    # %
-    critical: 90   # %
-    temp_warning: 75   # °C
-    temp_critical: 85  # °C
-    
-  memory:
-    warning: 80    # %
-    critical: 95   # %
-    
-  disk:
-    warning: 80    # %
-    critical: 95   # %
-
-# Alertas y notificaciones
-alerts:
-  enabled: true
-  sound_alerts: false
-  system_notifications: true
-  
-  # Configuración de alertas específicas
-  cpu_high_usage:
+    show_gpu_memory: true
+    update_interval: 1000
+  streaming:
+    alerts_disabled: true
     enabled: true
-    threshold: 85
-    duration: 10  # segundos antes de alertar
-    
-  gpu_high_temp:
-    enabled: true
-    threshold: 80
-    duration: 5
-    
-  memory_low:
-    enabled: true
-    threshold: 95
-    duration: 3
-
-# Logging y historial
+    show_network: true
+hardware:
+  amd:
+    use_adl: false
+  nvidia:
+    show_fan_speed: false
+    show_power_draw: false
+    use_nvml: true
+hotkeys:
+  export_logs: Ctrl+Shift+L
+  reset_alerts: Ctrl+Shift+A
+  toggle: Ctrl+Shift+M
+  toggle_detailed: Ctrl+M
 logging:
   enabled: true
-  interval: 30  # segundos
-  max_history_hours: 24
-  log_file: "system_monitor.log"
-  
-  # Métricas a registrar
+  interval: 30
+  log_file: system_monitor.log
   log_metrics:
     cpu_usage: true
     gpu_usage: true
     memory_usage: true
-    temperatures: true
     network_activity: false
-
-# Configuraciones por juego
-game_specific:
-  "Cyberpunk 2077":
-    enabled: true
-    show_gpu_memory: true
-    update_interval: 1000  # Más frecuente para juegos pesados
-    
-  "Counter-Strike 2":
-    enabled: true
-    show_per_core_cpu: true
-    position: "bottom_left"
-    
-  "streaming":
-    enabled: true
-    show_network: true
-    alerts_disabled: true  # No molestar durante streaming
-
-# Configuración de rendimiento
+    temperatures: true
+  max_history_hours: 24
 performance:
+  cache_duration: 1
   low_impact_mode: false
-  max_cpu_usage: 3  # % máximo que puede usar el monitor
-  cache_duration: 1  # segundos para cachear lecturas del sistema
-  
-# Hardware específico
-hardware:
-  # Configuración específica para NVIDIA
-  nvidia:
-    use_nvml: true  # Usar NVIDIA Management Library si está disponible
-    show_power_draw: false
-    show_fan_speed: false
-    
-  # Configuración específica para AMD
-  amd:
-    use_adl: false  # AMD Display Library
-    
-# Hotkeys
-hotkeys:
-  toggle: "Ctrl+Shift+M"
-  toggle_detailed: "Ctrl+M"
-  reset_alerts: "Ctrl+Shift+A"
-  export_logs: "Ctrl+Shift+L"
+  max_cpu_usage: 3
+show_cpu: true
+show_gpu: false
+show_memory: false
+show_network: false
+thresholds:
+  cpu:
+    critical: 85
+    temp_critical: 85
+    temp_warning: 70
+    warning: 70
+  disk:
+    critical: 95
+    warning: 80
+  gpu:
+    critical: 90
+    temp_critical: 85
+    temp_warning: 75
+    warning: 75
+  memory:
+    critical: 95
+    warning: 80
+update_interval: 1000

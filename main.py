@@ -25,10 +25,8 @@ from core.app_core import GamingHelperApp
 
 def setup_application():
     """Setup the main QApplication with necessary configurations."""
-    # Enable high DPI scaling
+    # Enable high DPI scaling - Qt6 way
     QApplication.setHighDpiScaleFactorRoundingPolicy(Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
-    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
-    QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
     
     app = QApplication(sys.argv)
     app.setApplicationName("Gaming Helper Overlay")

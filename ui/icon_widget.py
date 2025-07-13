@@ -37,10 +37,12 @@ class FloatingIcon(QWidget):
         self.pulse_animation = None
         self.bounce_animation = None
         
+        # Load configuration first
+        self._load_config()
+        
         # Setup UI
         self._setup_ui()
         self._setup_animations()
-        self._load_config()
         self._apply_styling()
     
     def _setup_ui(self):
