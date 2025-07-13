@@ -28,7 +28,7 @@ floating_icon:
   opacity: 1.0
   position:
     x: 1811
-    y: 910
+    y: 906
   size:
     height: 50
     width: 50
@@ -58,7 +58,7 @@ main_window:
     width: 500
 performance:
   fps_limit: 60
-  low_cpu_mode: true
+  low_cpu_mode: false
   max_threads: 10
   memory_limit: 512
   memory_limit_mb: 500
@@ -68,7 +68,7 @@ plugins:
   auto_load: true
   check_updates: true
   enabled:
-  - multi-hotkey_macros
+  - cpu_gpu_monitor
 ui:
   always_on_top: false
   animations: true
