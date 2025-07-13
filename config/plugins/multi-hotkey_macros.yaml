@@ -1,0 +1,21 @@
+auto_save: true
+debug_mode: true
+enabled: true
+execution_delay: 3.7199999999999647
+global_hotkey_enabled: true
+max_concurrent_macros: 5
+notification_enabled: true
+recording_keyboard: true
+recording_mouse: true
+saved_macros:
+  '1752448038605774':
+    actions: []
+    category: General
+    created_date: '2025-07-14T01:07:18.605778'
+    description: ''
+    enabled: true
+    hotkey: ''
+    modified_date: '2025-07-14T01:07:18.605786'
+    name: New Macro
+    repeat_count: 1
+    repeat_delay: 0.0

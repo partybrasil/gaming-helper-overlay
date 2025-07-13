@@ -67,7 +67,8 @@ plugins:
   auto_discover: true
   auto_load: true
   check_updates: true
-  enabled: []
+  enabled:
+  - multi-hotkey_macros
 ui:
   always_on_top: false
   animations: true

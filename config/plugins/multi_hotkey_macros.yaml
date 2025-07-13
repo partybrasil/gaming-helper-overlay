@@ -1,0 +1,72 @@
+# Multi-Hotkey Macros Plugin Configuration
+
+# General Settings
+enabled: true
+global_hotkey_enabled: true
+auto_save: true
+notification_enabled: true
+debug_mode: false
+
+# Recording Settings
+recording_mouse: true
+recording_keyboard: true
+recording_precision: 'medium'  # low, medium, high
+recording_sensitivity: 0.1      # seconds between recorded actions
+
+# Execution Settings
+execution_delay: 0.01          # seconds between actions
+max_concurrent_macros: 5       # maximum number of macros running simultaneously
+default_repeat_count: 1        # default number of repetitions for new macros
+default_repeat_delay: 0.0      # default delay between repetitions
+
+# Safety Settings
+require_confirmation: false    # ask before executing destructive macros
+safe_mode: true               # prevent certain dangerous actions
+max_action_duration: 300      # maximum seconds a single macro can run
+emergency_stop_key: 'ctrl+alt+esc'  # emergency stop hotkey
+
+# Hotkey Settings
+allow_global_hotkeys: true     # enable global system hotkeys
+hotkey_overlap_check: true     # check for conflicting hotkeys
+reserved_hotkeys:              # hotkeys that cannot be used
+  - 'ctrl+alt+del'
+  - 'alt+tab'
+  - 'win+l'
+
+# Categories for organizing macros
+default_categories:
+  - 'General'
+  - 'Gaming'
+  - 'Productivity' 
+  - 'Development'
+  - 'System'
+  - 'Custom'
+
+# Variable settings
+global_variables: {}           # global variables accessible to all macros
+variable_persistence: true     # save variables between sessions
+
+# UI Settings
+show_execution_progress: true
+show_action_descriptions: true
+panel_always_on_top: false
+panel_transparency: 95
+
+# Advanced Settings
+threading_enabled: true        # use threading for macro execution
+error_recovery: true          # attempt to recover from execution errors
+logging_level: 'INFO'         # DEBUG, INFO, WARNING, ERROR
+action_timeout: 30            # maximum seconds for a single action
+
+# Import/Export Settings
+backup_on_save: true          # create backup before saving macros
+export_format: 'json'        # default export format: json, yaml
+include_metadata: true        # include creation dates, statistics in exports
+
+# Statistics tracking
+track_execution_stats: true
+track_performance_metrics: true
+stats_retention_days: 30
+
+# Saved macros will be stored here by the plugin
+saved_macros: {}

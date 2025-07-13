@@ -42,7 +42,8 @@
 
 ### ✅ **COMPLETADO** - Plugins Integrados
 - [x] **🤖 Anti-AFK Emulation** (`anti_afk.py`) - Prevención automática de desconexiones por inactividad
-- [x] **🎯 Crosshair Overlay** (`crosshair.py`) - Mira personalizable con múltiples estilos
+- [x] **� Multi-Hotkey Macros** (`multi_hotkey_macros.py`) - Sistema avanzado de automatización y combos
+- [x] **�🎯 Crosshair Overlay** (`crosshair.py`) - Mira personalizable con múltiples estilos
 - [x] **📊 FPS Counter** (`fps_counter.py`) - Contador en tiempo real con estadísticas
 - [x] **💻 CPU/GPU Monitor** (`cpu_gpu_monitor.py`) - Monitor de recursos del sistema
 - [x] **Configuración por Plugin** - Archivos YAML individuales
@@ -80,6 +81,13 @@
   - ✅ Configuración avanzada con whitelist/blacklist
   - ✅ Características de seguridad y modo conservador
   - ✅ UI completa con estado en tiempo real
+- [x] **🎮 Multi-Hotkey Macros** - Sistema avanzado de automatización
+  - ✅ Creación de combos y macros personalizados
+  - ✅ Loops, delays y acciones complejas
+  - ✅ Grabación automática de acciones
+  - ✅ Hotkeys globales y ejecución concurrente
+  - ✅ Variables, condiciones y flujo avanzado
+  - ✅ UI completa con editor de macros
 
 ### 🟡 **PARCIALMENTE IMPLEMENTADO**
 - [x] **Base de Plugins** - Sistema extensible funcionando
@@ -201,6 +209,24 @@ Características:
 Uso: Previene desconexiones por AFK en juegos
 ```
 
+### 🎮 **Multi-Hotkey Macros** ✅
+```yaml
+Estado: COMPLETAMENTE FUNCIONAL
+Características:
+  ✅ Creación de macros personalizados
+  ✅ Hotkeys globales configurables
+  ✅ Grabación automática de acciones
+  ✅ Loops y delays avanzados
+  ✅ Acciones de mouse y teclado
+  ✅ Variables y condiciones
+  ✅ Ejecución concurrente
+  ✅ Editor visual de macros
+  ✅ Categorización de macros
+  ✅ Estadísticas de ejecución
+  ✅ Importación/Exportación
+  ✅ Modo seguro y parada de emergencia
+```
+
 ### 💻 **CPU/GPU Monitor** ✅
 ```yaml
 Estado: COMPLETAMENTE FUNCIONAL
@@ -226,6 +252,8 @@ Características:
 | `Ctrl+Shift+X` | Toggle Crosshair | ✅ |
 | `Ctrl+Shift+F` | Toggle FPS Counter | ✅ |
 | `Ctrl+Shift+M` | Toggle Monitor CPU/GPU | ✅ |
+| `Ctrl+Shift+K` | Toggle Multi-Hotkey Macros | ✅ |
+| `Ctrl+Alt+Esc` | Parada de Emergencia Macros | ✅ |
 | `Ctrl+Shift+N` | Siguiente Preset Crosshair | ✅ |
 | `Ctrl+Shift+R` | Reset Estadísticas FPS | ✅ |
 
@@ -255,6 +283,8 @@ gaming-helper-overlay/                    # 📦 Proyecto Principal
 │   └── 📄 assets_manager.py            # ✅ Gestor de assets
 │
 ├── 📁 plugins/                          # ✅ Plugins Integrados
+│   ├── 📄 anti_afk.py                  # ✅ Plugin anti-AFK
+│   ├── 📄 multi_hotkey_macros.py       # ✅ Plugin de macros avanzados
 │   ├── 📄 crosshair.py                 # ✅ Plugin de mira
 │   ├── 📄 fps_counter.py               # ✅ Contador de FPS
 │   └── 📄 cpu_gpu_monitor.py           # ✅ Monitor de sistema
