@@ -7,7 +7,7 @@ app:
   minimize_to_tray: true
   name: Gaming Helper Overlay
   startup_delay: 2.0
-  theme: light
+  theme: dark
   transparency_enabled: true
   version: 1.0.0
 control_panel:
@@ -25,10 +25,10 @@ floating_icon:
   always_on_top: true
   draggable: true
   icon_path: assets/icons/app_icon.png
-  opacity: 0.8
+  opacity: 1.0
   position:
-    x: 100
-    y: 100
+    x: 1581
+    y: 919
   size:
     height: 50
     width: 50
@@ -74,5 +74,5 @@ ui:
   font_size: 12
   glass_effect: true
   smooth_transitions: true
-  theme: dark
+  theme: light
   transparency_enabled: true

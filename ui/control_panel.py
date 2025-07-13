@@ -180,9 +180,9 @@ class ControlPanel(FloatingPanel):
         general_layout.addWidget(QLabel("Theme:"), row, 0)
         self.theme_combo = QComboBox()
         self.theme_combo.addItems(["Dark", "Light", "Auto"])
-        self.theme_combo.setCurrentText(self.config_manager.get("app.theme", "dark").title())
+        self.theme_combo.setCurrentText(self.config_manager.get("ui.theme", "dark").title())
         self.theme_combo.currentTextChanged.connect(
-            lambda text: self.config_manager.set("app.theme", text.lower())
+            lambda text: self._on_theme_changed(text.lower())
         )
         general_layout.addWidget(self.theme_combo, row, 1)
         row += 1
@@ -579,7 +579,7 @@ class ControlPanel(FloatingPanel):
     
     def _update_settings_ui(self):
         """Update settings UI with current values."""
-        self.theme_combo.setCurrentText(self.config_manager.get("app.theme", "dark").title())
+        self.theme_combo.setCurrentText(self.config_manager.get("ui.theme", "dark").title())
         self.auto_start_cb.setChecked(self.config_manager.get("app.auto_start", False))
         self.minimize_tray_cb.setChecked(self.config_manager.get("app.minimize_to_tray", True))
         self.glass_effect_cb.setChecked(self.config_manager.get("ui.glass_effect", True))
@@ -588,6 +588,23 @@ class ControlPanel(FloatingPanel):
         self.max_threads_spin.setValue(self.config_manager.get("performance.max_threads", 10))
         self.fps_limit_spin.setValue(self.config_manager.get("performance.fps_limit", 60))
         self.low_cpu_cb.setChecked(self.config_manager.get("performance.low_cpu_mode", False))
+    
+    def _on_theme_changed(self, theme: str):
+        """Handle theme change."""
+        self.config_manager.set("ui.theme", theme)
+        self.log_message(f"Theme changed to: {theme}")
+        
+        # Apply theme immediately
+        self._apply_theme(theme)
+    
+    def _apply_theme(self, theme: str):
+        """Apply the selected theme to the application."""
+        # This would apply the theme to all UI components
+        # For now, just update the styling
+        self._apply_styling()
+        
+        # Log the theme change
+        self.logger.info(f"Applied theme: {theme}")
     
     def _clear_logs(self):
         """Clear the log display."""

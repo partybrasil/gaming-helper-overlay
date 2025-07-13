@@ -15,7 +15,7 @@ from core.config_manager import ConfigManager
 from core.thread_manager import ThreadManager
 from ui.main_window import MainWindow
 from ui.control_panel import ControlPanel
-from ui.icon_widget import FloatingIcon
+from ui.icon_widget import FloatingIcon, SystemTrayManager
 
 
 class GamingHelperApp(QObject):
@@ -36,6 +36,7 @@ class GamingHelperApp(QObject):
         self.main_window = None
         self.control_panel = None
         self.floating_icon = None
+        self.tray_manager = None
         
         # Application state
         self.is_initialized = False
@@ -80,6 +81,7 @@ class GamingHelperApp(QObject):
             
             # Show floating icon
             self.floating_icon.show()
+            self.logger.info("Floating icon shown")
             
             self.is_initialized = True
             self.logger.info("Gaming Helper Overlay initialized successfully!")
@@ -123,6 +125,11 @@ class GamingHelperApp(QObject):
             config_manager=self.config_manager,
             control_panel=self.control_panel
         )
+        
+        # System tray
+        self.tray_manager = SystemTrayManager(
+            config_manager=self.config_manager
+        )
     
     def _connect_signals(self):
         """Connect signals between components."""
@@ -138,6 +145,12 @@ class GamingHelperApp(QObject):
         
         # Floating icon signals
         self.floating_icon.clicked.connect(self._toggle_control_panel)
+        
+        # System tray signals
+        if self.tray_manager.is_available():
+            self.tray_manager.show_main_window.connect(self.main_window.show)
+            self.tray_manager.show_control_panel.connect(self._show_control_panel)
+            self.tray_manager.quit_requested.connect(self.shutdown)
     
     def _load_plugins(self):
         """Load and initialize plugins."""
@@ -152,6 +165,12 @@ class GamingHelperApp(QObject):
         """Handle plugin deactivation."""
         self.logger.info(f"Plugin deactivated: {plugin_name}")
     
+    def _show_control_panel(self):
+        """Show control panel."""
+        self.control_panel.show()
+        self.control_panel.raise_()
+        self.control_panel.activateWindow()
+
     def _toggle_control_panel(self):
         """Toggle control panel visibility."""
         if self.control_panel.isVisible():

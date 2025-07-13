@@ -303,3 +303,439 @@
 2025-07-13 19:58:40,801 - PluginManager - INFO - Discovered 3 plugins
 2025-07-13 19:58:40,802 - GamingHelperApp - INFO - Plugin deactivated: CPU/GPU Monitor
 2025-07-13 19:58:40,802 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' deactivated
+2025-07-13 19:59:47,033 - GamingHelperApp - INFO - Gaming Helper Overlay starting...
+2025-07-13 19:59:47,033 - GamingHelperApp - INFO - Initializing Gaming Helper Overlay...
+2025-07-13 19:59:47,038 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-13 19:59:47,151 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 19:59:47,152 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 19:59:47,153 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 19:59:47,153 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 19:59:47,164 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 19:59:47,164 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 19:59:47,165 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 19:59:47,165 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 19:59:47,166 - PluginManager - INFO - Loaded plugin: Crosshair Overlay
+2025-07-13 19:59:47,175 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' initialized
+2025-07-13 19:59:47,176 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 19:59:47,176 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 19:59:47,177 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 19:59:47,177 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 19:59:47,178 - GamingHelperApp - INFO - Plugin activated: Crosshair Overlay
+2025-07-13 19:59:47,178 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' activated
+2025-07-13 19:59:47,185 - PluginManager - INFO - Loaded plugin: FPS Counter
+2025-07-13 19:59:47,192 - PluginManager - INFO - Loaded plugin: CPU/GPU Monitor
+2025-07-13 19:59:47,211 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' initialized
+2025-07-13 19:59:47,213 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 19:59:47,213 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 19:59:47,214 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 19:59:47,214 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 19:59:47,215 - GamingHelperApp - INFO - Plugin activated: CPU/GPU Monitor
+2025-07-13 19:59:47,215 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' activated
+2025-07-13 19:59:47,219 - GamingHelperApp - INFO - Gaming Helper Overlay initialized successfully!
+2025-07-13 19:59:56,799 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 19:59:56,800 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 19:59:56,801 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 19:59:56,801 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 19:59:56,801 - GamingHelperApp - INFO - Plugin deactivated: Crosshair Overlay
+2025-07-13 19:59:56,801 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' deactivated
+2025-07-13 19:59:59,421 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 19:59:59,421 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 19:59:59,422 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 19:59:59,422 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 19:59:59,422 - GamingHelperApp - INFO - Plugin deactivated: CPU/GPU Monitor
+2025-07-13 19:59:59,422 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' deactivated
+2025-07-13 20:09:59,840 - GamingHelperApp - INFO - Gaming Helper Overlay starting...
+2025-07-13 20:09:59,840 - GamingHelperApp - INFO - Initializing Gaming Helper Overlay...
+2025-07-13 20:09:59,844 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-13 20:09:59,995 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:09:59,996 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:09:59,997 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:09:59,997 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:10:00,021 - SystemTrayManager - INFO - System tray icon created
+2025-07-13 20:10:00,023 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:10:00,027 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:10:00,028 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:10:00,028 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:10:00,029 - PluginManager - INFO - Loaded plugin: Crosshair Overlay
+2025-07-13 20:10:00,039 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' initialized
+2025-07-13 20:10:00,040 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:10:00,041 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:10:00,042 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:10:00,042 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:10:00,043 - GamingHelperApp - INFO - Plugin activated: Crosshair Overlay
+2025-07-13 20:10:00,043 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' activated
+2025-07-13 20:10:00,051 - PluginManager - INFO - Loaded plugin: FPS Counter
+2025-07-13 20:10:00,058 - PluginManager - INFO - Loaded plugin: CPU/GPU Monitor
+2025-07-13 20:10:00,079 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' initialized
+2025-07-13 20:10:00,080 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:10:00,081 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:10:00,082 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:10:00,082 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:10:00,082 - GamingHelperApp - INFO - Plugin activated: CPU/GPU Monitor
+2025-07-13 20:10:00,083 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' activated
+2025-07-13 20:10:00,089 - GamingHelperApp - INFO - Gaming Helper Overlay initialized successfully!
+2025-07-13 20:10:22,385 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:10:22,386 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:10:22,386 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:10:22,386 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:10:22,386 - GamingHelperApp - INFO - Plugin deactivated: CPU/GPU Monitor
+2025-07-13 20:10:22,387 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' deactivated
+2025-07-13 20:10:22,810 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:10:22,811 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:10:22,812 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:10:22,812 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:10:22,812 - GamingHelperApp - INFO - Plugin deactivated: Crosshair Overlay
+2025-07-13 20:10:22,812 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' deactivated
+2025-07-13 20:11:06,297 - GamingHelperApp - INFO - Gaming Helper Overlay starting...
+2025-07-13 20:11:06,298 - GamingHelperApp - INFO - Initializing Gaming Helper Overlay...
+2025-07-13 20:11:06,302 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-13 20:11:06,439 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:11:06,440 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:11:06,441 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:11:06,441 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:11:06,453 - FloatingIcon - INFO - FloatingIcon initialized successfully
+2025-07-13 20:11:06,462 - SystemTrayManager - INFO - System tray icon created
+2025-07-13 20:11:06,463 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:11:06,464 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:11:06,464 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:11:06,464 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:11:06,467 - PluginManager - INFO - Loaded plugin: Crosshair Overlay
+2025-07-13 20:11:06,478 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' initialized
+2025-07-13 20:11:06,479 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:11:06,480 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:11:06,480 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:11:06,481 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:11:06,481 - GamingHelperApp - INFO - Plugin activated: Crosshair Overlay
+2025-07-13 20:11:06,481 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' activated
+2025-07-13 20:11:06,490 - PluginManager - INFO - Loaded plugin: FPS Counter
+2025-07-13 20:11:06,498 - PluginManager - INFO - Loaded plugin: CPU/GPU Monitor
+2025-07-13 20:11:06,520 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' initialized
+2025-07-13 20:11:06,521 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:11:06,522 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:11:06,523 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:11:06,523 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:11:06,523 - GamingHelperApp - INFO - Plugin activated: CPU/GPU Monitor
+2025-07-13 20:11:06,523 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' activated
+2025-07-13 20:11:06,529 - FloatingIcon - INFO - FloatingIcon shown at position (100, 100) with size 480x480
+2025-07-13 20:11:06,529 - GamingHelperApp - INFO - Floating icon shown
+2025-07-13 20:11:06,530 - GamingHelperApp - INFO - Gaming Helper Overlay initialized successfully!
+2025-07-13 20:11:14,811 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:11:14,812 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:11:14,812 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:11:14,813 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:11:14,813 - GamingHelperApp - INFO - Plugin deactivated: CPU/GPU Monitor
+2025-07-13 20:11:14,813 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' deactivated
+2025-07-13 20:11:15,245 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:11:15,245 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:11:15,246 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:11:15,246 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:11:15,246 - GamingHelperApp - INFO - Plugin deactivated: Crosshair Overlay
+2025-07-13 20:11:15,246 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' deactivated
+2025-07-13 20:11:35,977 - GamingHelperApp - INFO - Shutting down Gaming Helper Overlay...
+2025-07-13 20:11:35,980 - ConfigManager - INFO - Configuration saved successfully
+2025-07-13 20:11:35,980 - PluginManager - INFO - Shutting down all plugins...
+2025-07-13 20:11:35,982 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' shut down
+2025-07-13 20:11:35,982 - PluginManager - INFO - Unloaded plugin: Crosshair Overlay
+2025-07-13 20:11:35,982 - Plugin.FPS Counter - INFO - Plugin 'FPS Counter' shut down
+2025-07-13 20:11:35,982 - PluginManager - INFO - Unloaded plugin: FPS Counter
+2025-07-13 20:11:35,986 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' shut down
+2025-07-13 20:11:35,986 - PluginManager - INFO - Unloaded plugin: CPU/GPU Monitor
+2025-07-13 20:11:35,986 - PluginManager - INFO - All plugins shut down
+2025-07-13 20:11:35,986 - ThreadManager - INFO - Shutting down all threads...
+2025-07-13 20:11:35,986 - ThreadManager - INFO - All threads shut down
+2025-07-13 20:13:31,102 - GamingHelperApp - INFO - Gaming Helper Overlay starting...
+2025-07-13 20:13:31,102 - GamingHelperApp - INFO - Initializing Gaming Helper Overlay...
+2025-07-13 20:13:31,106 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-13 20:13:31,221 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:13:31,223 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:13:31,223 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:13:31,223 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:13:31,234 - FloatingIcon - INFO - FloatingIcon size set to: 480x480
+2025-07-13 20:13:31,235 - FloatingIcon - INFO - FloatingIcon initialized successfully
+2025-07-13 20:13:31,247 - SystemTrayManager - INFO - System tray icon created
+2025-07-13 20:13:31,248 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:13:31,249 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:13:31,249 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:13:31,250 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:13:31,251 - PluginManager - INFO - Loaded plugin: Crosshair Overlay
+2025-07-13 20:13:31,261 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' initialized
+2025-07-13 20:13:31,262 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:13:31,262 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:13:31,263 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:13:31,263 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:13:31,263 - GamingHelperApp - INFO - Plugin activated: Crosshair Overlay
+2025-07-13 20:13:31,264 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' activated
+2025-07-13 20:13:31,271 - PluginManager - INFO - Loaded plugin: FPS Counter
+2025-07-13 20:13:31,278 - PluginManager - INFO - Loaded plugin: CPU/GPU Monitor
+2025-07-13 20:13:31,298 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' initialized
+2025-07-13 20:13:31,300 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:13:31,300 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:13:31,301 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:13:31,301 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:13:31,301 - GamingHelperApp - INFO - Plugin activated: CPU/GPU Monitor
+2025-07-13 20:13:31,302 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' activated
+2025-07-13 20:13:31,309 - FloatingIcon - INFO - FloatingIcon shown at position (1443, 528) with size 480x480
+2025-07-13 20:13:31,309 - GamingHelperApp - INFO - Floating icon shown
+2025-07-13 20:13:31,309 - GamingHelperApp - INFO - Gaming Helper Overlay initialized successfully!
+2025-07-13 20:13:35,868 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:13:35,869 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:13:35,870 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:13:35,870 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:13:35,871 - GamingHelperApp - INFO - Plugin deactivated: CPU/GPU Monitor
+2025-07-13 20:13:35,871 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' deactivated
+2025-07-13 20:13:36,433 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:13:36,433 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:13:36,434 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:13:36,434 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:13:36,435 - GamingHelperApp - INFO - Plugin deactivated: Crosshair Overlay
+2025-07-13 20:13:36,435 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' deactivated
+2025-07-13 20:13:54,535 - GamingHelperApp - INFO - Shutting down Gaming Helper Overlay...
+2025-07-13 20:13:54,538 - ConfigManager - INFO - Configuration saved successfully
+2025-07-13 20:13:54,538 - PluginManager - INFO - Shutting down all plugins...
+2025-07-13 20:13:54,540 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' shut down
+2025-07-13 20:13:54,540 - PluginManager - INFO - Unloaded plugin: Crosshair Overlay
+2025-07-13 20:13:54,540 - Plugin.FPS Counter - INFO - Plugin 'FPS Counter' shut down
+2025-07-13 20:13:54,540 - PluginManager - INFO - Unloaded plugin: FPS Counter
+2025-07-13 20:13:54,543 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' shut down
+2025-07-13 20:13:54,543 - PluginManager - INFO - Unloaded plugin: CPU/GPU Monitor
+2025-07-13 20:13:54,543 - PluginManager - INFO - All plugins shut down
+2025-07-13 20:13:54,543 - ThreadManager - INFO - Shutting down all threads...
+2025-07-13 20:13:54,544 - ThreadManager - INFO - All threads shut down
+2025-07-13 20:14:18,079 - GamingHelperApp - INFO - Gaming Helper Overlay starting...
+2025-07-13 20:14:18,079 - GamingHelperApp - INFO - Initializing Gaming Helper Overlay...
+2025-07-13 20:14:18,084 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-13 20:14:18,212 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:14:18,213 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:14:18,214 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:14:18,214 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:14:18,222 - FloatingIcon - INFO - FloatingIcon size set to: 480x480
+2025-07-13 20:14:18,223 - FloatingIcon - INFO - FloatingIcon initialized successfully
+2025-07-13 20:14:18,231 - SystemTrayManager - INFO - System tray icon created
+2025-07-13 20:14:18,232 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:14:18,233 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:14:18,234 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:14:18,235 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:14:18,237 - PluginManager - INFO - Loaded plugin: Crosshair Overlay
+2025-07-13 20:14:18,247 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' initialized
+2025-07-13 20:14:18,248 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:14:18,249 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:14:18,249 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:14:18,249 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:14:18,250 - GamingHelperApp - INFO - Plugin activated: Crosshair Overlay
+2025-07-13 20:14:18,250 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' activated
+2025-07-13 20:14:18,259 - PluginManager - INFO - Loaded plugin: FPS Counter
+2025-07-13 20:14:18,266 - PluginManager - INFO - Loaded plugin: CPU/GPU Monitor
+2025-07-13 20:14:18,287 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' initialized
+2025-07-13 20:14:18,289 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:14:18,290 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:14:18,290 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:14:18,290 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:14:18,291 - GamingHelperApp - INFO - Plugin activated: CPU/GPU Monitor
+2025-07-13 20:14:18,291 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' activated
+2025-07-13 20:14:18,297 - FloatingIcon - INFO - FloatingIcon shown at position (1443, 528) with size 480x480
+2025-07-13 20:14:18,297 - GamingHelperApp - INFO - Floating icon shown
+2025-07-13 20:14:18,297 - GamingHelperApp - INFO - Gaming Helper Overlay initialized successfully!
+2025-07-13 20:14:22,384 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:14:22,385 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:14:22,386 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:14:22,386 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:14:22,386 - GamingHelperApp - INFO - Plugin deactivated: CPU/GPU Monitor
+2025-07-13 20:14:22,386 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' deactivated
+2025-07-13 20:14:23,542 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:14:23,542 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:14:23,543 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:14:23,543 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:14:23,544 - GamingHelperApp - INFO - Plugin deactivated: Crosshair Overlay
+2025-07-13 20:14:23,544 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' deactivated
+2025-07-13 20:14:37,636 - GamingHelperApp - INFO - Shutting down Gaming Helper Overlay...
+2025-07-13 20:14:37,638 - ConfigManager - INFO - Configuration saved successfully
+2025-07-13 20:14:37,639 - PluginManager - INFO - Shutting down all plugins...
+2025-07-13 20:14:37,641 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' shut down
+2025-07-13 20:14:37,641 - PluginManager - INFO - Unloaded plugin: Crosshair Overlay
+2025-07-13 20:14:37,641 - Plugin.FPS Counter - INFO - Plugin 'FPS Counter' shut down
+2025-07-13 20:14:37,642 - PluginManager - INFO - Unloaded plugin: FPS Counter
+2025-07-13 20:14:37,644 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' shut down
+2025-07-13 20:14:37,645 - PluginManager - INFO - Unloaded plugin: CPU/GPU Monitor
+2025-07-13 20:14:37,645 - PluginManager - INFO - All plugins shut down
+2025-07-13 20:14:37,645 - ThreadManager - INFO - Shutting down all threads...
+2025-07-13 20:14:37,645 - ThreadManager - INFO - All threads shut down
+2025-07-13 20:16:21,278 - GamingHelperApp - INFO - Gaming Helper Overlay starting...
+2025-07-13 20:16:21,278 - GamingHelperApp - INFO - Initializing Gaming Helper Overlay...
+2025-07-13 20:16:21,283 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-13 20:16:21,417 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:16:21,418 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:16:21,419 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:16:21,419 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:16:21,429 - FloatingIcon - INFO - FloatingIcon size set to: 50x50
+2025-07-13 20:16:21,431 - FloatingIcon - INFO - FloatingIcon initialized successfully
+2025-07-13 20:16:21,439 - SystemTrayManager - INFO - System tray icon created
+2025-07-13 20:16:21,442 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:16:21,444 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:16:21,445 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:16:21,445 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:16:21,447 - PluginManager - INFO - Loaded plugin: Crosshair Overlay
+2025-07-13 20:16:21,459 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' initialized
+2025-07-13 20:16:21,460 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:16:21,461 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:16:21,462 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:16:21,462 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:16:21,463 - GamingHelperApp - INFO - Plugin activated: Crosshair Overlay
+2025-07-13 20:16:21,463 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' activated
+2025-07-13 20:16:21,470 - PluginManager - INFO - Loaded plugin: FPS Counter
+2025-07-13 20:16:21,482 - PluginManager - INFO - Loaded plugin: CPU/GPU Monitor
+2025-07-13 20:16:21,513 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' initialized
+2025-07-13 20:16:21,514 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:16:21,515 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:16:21,516 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:16:21,516 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:16:21,517 - GamingHelperApp - INFO - Plugin activated: CPU/GPU Monitor
+2025-07-13 20:16:21,517 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' activated
+2025-07-13 20:16:21,524 - FloatingIcon - INFO - FloatingIcon shown at position (100, 100) with size 480x480
+2025-07-13 20:16:21,525 - GamingHelperApp - INFO - Floating icon shown
+2025-07-13 20:16:21,525 - GamingHelperApp - INFO - Gaming Helper Overlay initialized successfully!
+2025-07-13 20:16:26,361 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:16:26,362 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:16:26,362 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:16:26,363 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:16:26,363 - GamingHelperApp - INFO - Plugin deactivated: CPU/GPU Monitor
+2025-07-13 20:16:26,363 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' deactivated
+2025-07-13 20:16:28,034 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:16:28,034 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:16:28,035 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:16:28,035 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:16:28,035 - GamingHelperApp - INFO - Plugin deactivated: Crosshair Overlay
+2025-07-13 20:16:28,036 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' deactivated
+2025-07-13 20:16:43,489 - GamingHelperApp - INFO - Shutting down Gaming Helper Overlay...
+2025-07-13 20:16:43,492 - ConfigManager - INFO - Configuration saved successfully
+2025-07-13 20:16:43,493 - PluginManager - INFO - Shutting down all plugins...
+2025-07-13 20:16:43,496 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' shut down
+2025-07-13 20:16:43,496 - PluginManager - INFO - Unloaded plugin: Crosshair Overlay
+2025-07-13 20:16:43,496 - Plugin.FPS Counter - INFO - Plugin 'FPS Counter' shut down
+2025-07-13 20:16:43,496 - PluginManager - INFO - Unloaded plugin: FPS Counter
+2025-07-13 20:16:43,499 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' shut down
+2025-07-13 20:16:43,500 - PluginManager - INFO - Unloaded plugin: CPU/GPU Monitor
+2025-07-13 20:16:43,500 - PluginManager - INFO - All plugins shut down
+2025-07-13 20:16:43,500 - ThreadManager - INFO - Shutting down all threads...
+2025-07-13 20:16:43,500 - ThreadManager - INFO - All threads shut down
+2025-07-13 20:17:02,863 - GamingHelperApp - INFO - Gaming Helper Overlay starting...
+2025-07-13 20:17:02,863 - GamingHelperApp - INFO - Initializing Gaming Helper Overlay...
+2025-07-13 20:17:02,867 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-13 20:17:02,982 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:17:02,983 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:17:02,984 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:17:02,984 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:17:02,995 - FloatingIcon - INFO - FloatingIcon size set to: 50x50
+2025-07-13 20:17:02,997 - FloatingIcon - INFO - FloatingIcon final size after initialization: 50x50
+2025-07-13 20:17:02,997 - FloatingIcon - INFO - FloatingIcon initialized successfully
+2025-07-13 20:17:03,005 - SystemTrayManager - INFO - System tray icon created
+2025-07-13 20:17:03,006 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:17:03,008 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:17:03,009 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:17:03,009 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:17:03,011 - PluginManager - INFO - Loaded plugin: Crosshair Overlay
+2025-07-13 20:17:03,020 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' initialized
+2025-07-13 20:17:03,021 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:17:03,022 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:17:03,022 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:17:03,022 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:17:03,023 - GamingHelperApp - INFO - Plugin activated: Crosshair Overlay
+2025-07-13 20:17:03,023 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' activated
+2025-07-13 20:17:03,033 - PluginManager - INFO - Loaded plugin: FPS Counter
+2025-07-13 20:17:03,041 - PluginManager - INFO - Loaded plugin: CPU/GPU Monitor
+2025-07-13 20:17:03,064 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' initialized
+2025-07-13 20:17:03,065 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:17:03,066 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:17:03,066 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:17:03,066 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:17:03,067 - GamingHelperApp - INFO - Plugin activated: CPU/GPU Monitor
+2025-07-13 20:17:03,067 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' activated
+2025-07-13 20:17:03,070 - FloatingIcon - INFO - FloatingIcon resize event: -1x-1 -> 480x480
+2025-07-13 20:17:03,072 - FloatingIcon - INFO - FloatingIcon shown at position (1334, 525) with size 480x480
+2025-07-13 20:17:03,072 - GamingHelperApp - INFO - Floating icon shown
+2025-07-13 20:17:03,072 - GamingHelperApp - INFO - Gaming Helper Overlay initialized successfully!
+2025-07-13 20:17:08,848 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:17:08,848 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:17:08,849 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:17:08,849 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:17:08,850 - GamingHelperApp - INFO - Plugin deactivated: CPU/GPU Monitor
+2025-07-13 20:17:08,850 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' deactivated
+2025-07-13 20:17:10,625 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:17:10,626 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:17:10,627 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:17:10,627 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:17:10,627 - GamingHelperApp - INFO - Plugin deactivated: Crosshair Overlay
+2025-07-13 20:17:10,627 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' deactivated
+2025-07-13 20:17:31,328 - GamingHelperApp - INFO - Shutting down Gaming Helper Overlay...
+2025-07-13 20:17:31,331 - ConfigManager - INFO - Configuration saved successfully
+2025-07-13 20:17:31,331 - PluginManager - INFO - Shutting down all plugins...
+2025-07-13 20:17:31,333 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' shut down
+2025-07-13 20:17:31,333 - PluginManager - INFO - Unloaded plugin: Crosshair Overlay
+2025-07-13 20:17:31,333 - Plugin.FPS Counter - INFO - Plugin 'FPS Counter' shut down
+2025-07-13 20:17:31,333 - PluginManager - INFO - Unloaded plugin: FPS Counter
+2025-07-13 20:17:31,337 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' shut down
+2025-07-13 20:17:31,337 - PluginManager - INFO - Unloaded plugin: CPU/GPU Monitor
+2025-07-13 20:17:31,337 - PluginManager - INFO - All plugins shut down
+2025-07-13 20:17:31,338 - ThreadManager - INFO - Shutting down all threads...
+2025-07-13 20:17:31,338 - ThreadManager - INFO - All threads shut down
+2025-07-13 20:18:30,923 - GamingHelperApp - INFO - Gaming Helper Overlay starting...
+2025-07-13 20:18:30,923 - GamingHelperApp - INFO - Initializing Gaming Helper Overlay...
+2025-07-13 20:18:30,928 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-13 20:18:31,053 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:18:31,054 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:18:31,055 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:18:31,055 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:18:31,065 - FloatingIcon - INFO - FloatingIcon size set to: 50x50
+2025-07-13 20:18:31,066 - FloatingIcon - INFO - Icon loaded and scaled to: 50x50
+2025-07-13 20:18:31,066 - FloatingIcon - INFO - FloatingIcon final size after initialization: 50x50
+2025-07-13 20:18:31,066 - FloatingIcon - INFO - FloatingIcon initialized successfully
+2025-07-13 20:18:31,074 - SystemTrayManager - INFO - System tray icon created
+2025-07-13 20:18:31,075 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:18:31,076 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:18:31,077 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:18:31,077 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:18:31,080 - PluginManager - INFO - Loaded plugin: Crosshair Overlay
+2025-07-13 20:18:31,089 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' initialized
+2025-07-13 20:18:31,091 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:18:31,091 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:18:31,092 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:18:31,092 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:18:31,094 - GamingHelperApp - INFO - Plugin activated: Crosshair Overlay
+2025-07-13 20:18:31,094 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' activated
+2025-07-13 20:18:31,102 - PluginManager - INFO - Loaded plugin: FPS Counter
+2025-07-13 20:18:31,110 - PluginManager - INFO - Loaded plugin: CPU/GPU Monitor
+2025-07-13 20:18:31,132 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' initialized
+2025-07-13 20:18:31,133 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:18:31,134 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:18:31,135 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:18:31,135 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:18:31,136 - GamingHelperApp - INFO - Plugin activated: CPU/GPU Monitor
+2025-07-13 20:18:31,136 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' activated
+2025-07-13 20:18:31,140 - FloatingIcon - INFO - FloatingIcon resize event: -1x-1 -> 50x50
+2025-07-13 20:18:31,140 - FloatingIcon - INFO - Icon loaded and scaled to: 50x50
+2025-07-13 20:18:31,141 - FloatingIcon - INFO - FloatingIcon shown at position (1334, 525) with size 50x50
+2025-07-13 20:18:31,141 - GamingHelperApp - INFO - Floating icon shown
+2025-07-13 20:18:31,141 - GamingHelperApp - INFO - Gaming Helper Overlay initialized successfully!
+2025-07-13 20:18:46,055 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:18:46,055 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:18:46,056 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:18:46,056 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:18:46,056 - GamingHelperApp - INFO - Plugin deactivated: CPU/GPU Monitor
+2025-07-13 20:18:46,057 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' deactivated
+2025-07-13 20:18:46,913 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-13 20:18:46,914 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-13 20:18:46,915 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-13 20:18:46,915 - PluginManager - INFO - Discovered 3 plugins
+2025-07-13 20:18:46,915 - GamingHelperApp - INFO - Plugin deactivated: Crosshair Overlay
+2025-07-13 20:18:46,915 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' deactivated
+2025-07-13 20:18:50,553 - GamingHelperApp - INFO - Shutting down Gaming Helper Overlay...
+2025-07-13 20:18:50,556 - ConfigManager - INFO - Configuration saved successfully
+2025-07-13 20:18:50,556 - PluginManager - INFO - Shutting down all plugins...
+2025-07-13 20:18:50,558 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' shut down
+2025-07-13 20:18:50,558 - PluginManager - INFO - Unloaded plugin: Crosshair Overlay
+2025-07-13 20:18:50,559 - Plugin.FPS Counter - INFO - Plugin 'FPS Counter' shut down
+2025-07-13 20:18:50,559 - PluginManager - INFO - Unloaded plugin: FPS Counter
+2025-07-13 20:18:50,562 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' shut down
+2025-07-13 20:18:50,562 - PluginManager - INFO - Unloaded plugin: CPU/GPU Monitor
+2025-07-13 20:18:50,562 - PluginManager - INFO - All plugins shut down
+2025-07-13 20:18:50,562 - ThreadManager - INFO - Shutting down all threads...
+2025-07-13 20:18:50,562 - ThreadManager - INFO - All threads shut down

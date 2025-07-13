@@ -5,11 +5,100 @@ A draggable floating icon that provides quick access to the control panel.
 
 import logging
 from pathlib import Path
-from PySide6.QtWidgets import QWidget, QLabel, QVBoxLayout, QGraphicsDropShadowEffect
-from PySide6.QtCore import Qt, QPoint, QTimer, QPropertyAnimation, QEasingCurve, Signal
+from PySide6.QtWidgets import (QWidget, QLabel, QVBoxLayout, QGraphicsDropShadowEffect,
+                              QSystemTrayIcon, QMenu, QApplication)
+from PySide6.QtCore import Qt, QPoint, QTimer, QPropertyAnimation, QEasingCurve, Signal, QRect, QObject, QSize
 from PySide6.QtGui import QPixmap, QIcon, QPainter, QColor, QFont, QPen, QBrush
 
 from core.config_manager import ConfigManager
+
+
+class SystemTrayManager(QObject):
+    """Manages the system tray icon and menu."""
+    
+    # Signals
+    show_main_window = Signal()
+    show_control_panel = Signal()
+    quit_requested = Signal()
+    
+    def __init__(self, config_manager: ConfigManager):
+        super().__init__()
+        
+        self.config_manager = config_manager
+        self.logger = logging.getLogger("SystemTrayManager")
+        
+        # Check if system tray is available
+        if not QSystemTrayIcon.isSystemTrayAvailable():
+            self.logger.warning("System tray is not available")
+            return
+        
+        self.tray_icon = None
+        self.tray_menu = None
+        self._create_tray_icon()
+    
+    def _create_tray_icon(self):
+        """Create the system tray icon."""
+        # Create tray icon
+        self.tray_icon = QSystemTrayIcon()
+        
+        # Set icon
+        icon_path = Path(__file__).parent.parent / "assets" / "icons" / "app_icon.png"
+        if icon_path.exists():
+            self.tray_icon.setIcon(QIcon(str(icon_path)))
+        else:
+            # Use default icon from application
+            self.tray_icon.setIcon(QApplication.style().standardIcon(QApplication.style().SP_ComputerIcon))
+        
+        # Set tooltip
+        self.tray_icon.setToolTip("Gaming Helper Overlay")
+        
+        # Create context menu
+        self._create_tray_menu()
+        
+        # Connect signals
+        self.tray_icon.activated.connect(self._on_tray_activated)
+        
+        # Show tray icon
+        self.tray_icon.show()
+        
+        self.logger.info("System tray icon created")
+    
+    def _create_tray_menu(self):
+        """Create the tray context menu."""
+        self.tray_menu = QMenu()
+        
+        # Show main window action
+        show_action = self.tray_menu.addAction("Show Main Window")
+        show_action.triggered.connect(self.show_main_window.emit)
+        
+        # Show control panel action
+        control_action = self.tray_menu.addAction("Control Panel")
+        control_action.triggered.connect(self.show_control_panel.emit)
+        
+        self.tray_menu.addSeparator()
+        
+        # Quit action
+        quit_action = self.tray_menu.addAction("Quit")
+        quit_action.triggered.connect(self.quit_requested.emit)
+        
+        # Set menu
+        self.tray_icon.setContextMenu(self.tray_menu)
+    
+    def _on_tray_activated(self, reason):
+        """Handle tray icon activation."""
+        if reason == QSystemTrayIcon.DoubleClick:
+            self.show_control_panel.emit()
+        elif reason == QSystemTrayIcon.Trigger:
+            self.show_control_panel.emit()
+    
+    def show_message(self, title: str, message: str, icon=QSystemTrayIcon.Information, timeout=5000):
+        """Show a tray notification message."""
+        if self.tray_icon:
+            self.tray_icon.showMessage(title, message, icon, timeout)
+    
+    def is_available(self) -> bool:
+        """Check if system tray is available."""
+        return QSystemTrayIcon.isSystemTrayAvailable() and self.tray_icon is not None
 
 
 class FloatingIcon(QWidget):
@@ -44,6 +133,12 @@ class FloatingIcon(QWidget):
         self._setup_ui()
         self._setup_animations()
         self._apply_styling()
+        
+        # Load icon after everything is set up
+        self._load_icon()
+        
+        self.logger.info(f"FloatingIcon final size after initialization: {self.width()}x{self.height()}")
+        self.logger.info("FloatingIcon initialized successfully")
     
     def _setup_ui(self):
         """Setup the floating icon UI."""
@@ -67,8 +162,7 @@ class FloatingIcon(QWidget):
         
         layout.addWidget(self.icon_label)
         
-        # Load default icon
-        self._load_icon()
+        # Don't load icon here - wait until after size is set
     
     def _setup_animations(self):
         """Setup animations for the icon."""
@@ -94,6 +188,9 @@ class FloatingIcon(QWidget):
         # Size
         size = self.config_manager.get("floating_icon.size", {"width": 50, "height": 50})
         self.resize(size["width"], size["height"])
+        # Set fixed size to prevent automatic resizing
+        self.setFixedSize(size["width"], size["height"])
+        self.logger.info(f"FloatingIcon size set to: {size['width']}x{size['height']}")
         
         # Opacity
         opacity = self.config_manager.get("floating_icon.opacity", 0.8)
@@ -104,13 +201,9 @@ class FloatingIcon(QWidget):
     
     def _save_config(self):
         """Save icon configuration."""
-        # Position
+        # Only save position and opacity, not size (to avoid overwriting configured size)
         pos = self.pos()
         self.config_manager.set("floating_icon.position", {"x": pos.x(), "y": pos.y()})
-        
-        # Size
-        size = self.size()
-        self.config_manager.set("floating_icon.size", {"width": size.width(), "height": size.height()})
         
         # Opacity
         self.config_manager.set("floating_icon.opacity", self.windowOpacity())
@@ -126,14 +219,19 @@ class FloatingIcon(QWidget):
                 # Create default icon if file doesn't exist
                 pixmap = self._create_default_icon()
             
-            # Scale pixmap to fit label
+            # Get the desired widget size from configuration
+            target_size = self.config_manager.get("floating_icon.size", {"width": 50, "height": 50})
+            widget_size = QSize(target_size["width"], target_size["height"])
+            
+            # Scale pixmap to fit the target size, not the label size
             scaled_pixmap = pixmap.scaled(
-                self.icon_label.size(),
+                widget_size,
                 Qt.KeepAspectRatio,
                 Qt.SmoothTransformation
             )
             
             self.icon_label.setPixmap(scaled_pixmap)
+            self.logger.info(f"Icon loaded and scaled to: {scaled_pixmap.width()}x{scaled_pixmap.height()}")
             
         except Exception as e:
             self.logger.error(f"Failed to load icon: {e}")
@@ -274,10 +372,14 @@ class FloatingIcon(QWidget):
     def mouseReleaseEvent(self, event):
         """Handle mouse release events."""
         if event.button() == Qt.LeftButton:
-            self.is_dragging = False
+            if not self.is_dragging:
+                # Emit clicked signal only if not dragging
+                self.clicked.emit()
+            else:
+                # Only save config if we actually dragged the icon
+                self._save_config()
             
-            # Save new position
-            self._save_config()
+            self.is_dragging = False
             
             event.accept()
     
@@ -319,6 +421,10 @@ class FloatingIcon(QWidget):
     
     def resizeEvent(self, event):
         """Handle resize events."""
+        old_size = event.oldSize()
+        new_size = event.size()
+        self.logger.info(f"FloatingIcon resize event: {old_size.width()}x{old_size.height()} -> {new_size.width()}x{new_size.height()}")
+        
         super().resizeEvent(event)
         
         # Reload icon to fit new size
@@ -330,12 +436,16 @@ class FloatingIcon(QWidget):
         super().closeEvent(event)
     
     def show(self):
-        """Override show to emit clicked signal when shown."""
+        """Override show to connect signals properly."""
         super().show()
+        self.logger.info(f"FloatingIcon shown at position ({self.x()}, {self.y()}) with size {self.width()}x{self.height()}")
         
-        # Connect click signal to control panel toggle
-        if not self.clicked.connect:
-            self.clicked.connect(self._handle_click)
+        # Connect click signal to control panel toggle if not already connected
+        try:
+            self.clicked.disconnect()  # Disconnect any existing connections
+        except:
+            pass
+        self.clicked.connect(self._handle_click)
     
     def _handle_click(self):
         """Handle icon click."""
