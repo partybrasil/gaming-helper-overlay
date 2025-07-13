@@ -242,7 +242,7 @@ class PluginManager(QObject):
             self.loaded_plugins[plugin_name] = plugin_instance
             self.plugin_loaded.emit(plugin_name)
             
-            self.logger.info(f"Loaded plugin: {plugin_name}")
+            self.logger.info(f"[PLUGIN] Loaded plugin: {plugin_name}")
             return True
             
         except Exception as e:
@@ -333,26 +333,28 @@ class PluginManager(QObject):
         return [name for name, plugin in self.loaded_plugins.items() if plugin.is_active]
     
     def load_enabled_plugins(self) -> None:
-        """Load all enabled plugins from configuration."""
-        enabled_plugins = self.config_manager.get("plugins.enabled", [])
+        """Load all available plugins but keep them INACTIVE by default."""
+        self.logger.info("[PLUGINS] Loading available plugins (all will start INACTIVE)")
         
-        for config_name in enabled_plugins:
-            # Find the actual plugin name from config name
-            plugin_name = self._find_plugin_by_config_name(config_name)
-            if plugin_name:
-                if self.load_plugin(plugin_name):
-                    self.activate_plugin(plugin_name)
-            else:
-                self.logger.warning(f"Plugin with config name '{config_name}' not found")
+        # Load all available plugins but don't activate them
+        for plugin_name in self.available_plugins.keys():
+            if plugin_name not in self.loaded_plugins:
+                self.load_plugin(plugin_name)
+                self.logger.info(f"[PLUGIN] Loaded plugin '{plugin_name}' (INACTIVE by default)")
+        
+        # Ensure all plugins start in INACTIVE state - clear any previous enabled state
+        self.config_manager.set("plugins.enabled", [])
+        self.logger.info("[BLOCKED] All plugins loaded in INACTIVE state - no auto-activation")
     
     def shutdown_all_plugins(self) -> None:
         """Shutdown all loaded plugins."""
-        self.logger.info("Shutting down all plugins...")
+        self.logger.info("[PLUGIN] Shutting down all plugins...")
         
         for plugin_name in list(self.loaded_plugins.keys()):
+            self.logger.info(f"[PLUGIN] Unloading plugin: {plugin_name}")
             self.unload_plugin(plugin_name)
         
-        self.logger.info("All plugins shut down")
+        self.logger.info("[SUCCESS] All plugins shut down")
     
     def _on_plugin_status_changed(self, plugin_name: str, status: str):
         """Handle plugin status changes."""

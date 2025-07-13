@@ -14,9 +14,12 @@ from PySide6.QtCore import Qt, QTimer, Signal
 from PySide6.QtGui import QIcon, QFont
 
 from ui.floating_panel import FloatingPanel
+from ui.log_display import LogDisplay
 from core.config_manager import ConfigManager
 from core.plugin_manager import PluginManager
 from core.thread_manager import ThreadManager
+from core.tool_manager import ToolManager
+from core.tool_manager import ToolManager
 
 
 class PluginListItem(QListWidgetItem):
@@ -38,6 +41,39 @@ class PluginListItem(QListWidgetItem):
                        f"Description: {plugin_info.get('description', 'No description')}")
 
 
+class ToolListItem(QListWidgetItem):
+    """Custom list item for tools."""
+    
+    def __init__(self, tool_name: str, tool_info: Dict[str, Any]):
+        super().__init__()
+        
+        self.tool_name = tool_name
+        self.tool_info = tool_info
+        
+        # Set display text with category emoji
+        category_icons = {
+            "GPU/Graphics": "🎮",
+            "System": "💻", 
+            "Network": "🌐",
+            "Gaming": "🎯",
+            "General": "🔧"
+        }
+        
+        category = tool_info.get("category", "General")
+        icon = category_icons.get(category, "🔧")
+        admin_marker = " 🛡️" if tool_info.get("requires_admin", False) else ""
+        
+        self.setText(f"{icon} {tool_name}{admin_marker}")
+        
+        # Set tooltip
+        self.setToolTip(f"File: {tool_info.get('filename', 'Unknown')}\n"
+                       f"Version: {tool_info.get('version', 'Unknown')}\n"
+                       f"Author: {tool_info.get('author', 'Unknown')}\n"
+                       f"Category: {category}\n"
+                       f"Requires Admin: {'Yes' if tool_info.get('requires_admin', False) else 'No'}\n"
+                       f"Description: {tool_info.get('description', 'No description')}")
+
+
 class ControlPanel(FloatingPanel):
     """Main control panel for the gaming helper overlay."""
     
@@ -50,6 +86,7 @@ class ControlPanel(FloatingPanel):
         
         self.plugin_manager = plugin_manager
         self.thread_manager = thread_manager
+        self.tool_manager = ToolManager()  # Initialize tool manager
         
         # Initialize base floating panel
         super().__init__(config_manager, "Control Panel", parent)
@@ -59,6 +96,8 @@ class ControlPanel(FloatingPanel):
         # UI components
         self.tabs = None
         self.plugin_list = None
+        self.tool_list = None  # Tool list widget
+        self.tool_details = None  # Tool details widget
         self.status_text = None
         self.thread_status_widget = None
         
@@ -82,6 +121,7 @@ class ControlPanel(FloatingPanel):
         
         # Create tabs
         self._create_plugins_tab()
+        self._create_tools_tab()  # Add tools tab after plugins
         self._create_settings_tab()
         self._create_threads_tab()
         self._create_logs_tab()
@@ -158,6 +198,103 @@ class ControlPanel(FloatingPanel):
         
         # Load plugins
         self._refresh_plugins()
+    
+    def _create_tools_tab(self):
+        """Create the tools management tab."""
+        tab = QWidget()
+        layout = QHBoxLayout(tab)
+        
+        # Left side - Tool list
+        left_frame = QFrame()
+        left_layout = QVBoxLayout(left_frame)
+        
+        # Tool list header
+        tools_label = QLabel("Available Tools")
+        tools_label.setFont(QFont("Arial", 12, QFont.Bold))
+        left_layout.addWidget(tools_label)
+        
+        # Tool list
+        self.tool_list = QListWidget()
+        self.tool_list.itemSelectionChanged.connect(self._on_tool_selected)
+        left_layout.addWidget(self.tool_list)
+        
+        # Tool control buttons
+        button_layout = QHBoxLayout()
+        
+        self.run_btn = QPushButton("🚀 Run")
+        self.run_btn.setToolTip("Run the selected tool normally")
+        self.run_btn.clicked.connect(self._run_selected_tool)
+        self.run_btn.setEnabled(False)
+        button_layout.addWidget(self.run_btn)
+        
+        self.run_admin_btn = QPushButton("🛡️ Run as Admin")
+        self.run_admin_btn.setToolTip("Run the selected tool with administrator privileges")
+        self.run_admin_btn.clicked.connect(self._run_selected_tool_admin)
+        self.run_admin_btn.setEnabled(False)
+        button_layout.addWidget(self.run_admin_btn)
+        
+        button_layout2 = QHBoxLayout()
+        
+        self.run_terminal_btn = QPushButton("🖥️ New Terminal")
+        self.run_terminal_btn.setToolTip("Run the selected tool in a new terminal window")
+        self.run_terminal_btn.clicked.connect(self._run_selected_tool_terminal)
+        self.run_terminal_btn.setEnabled(False)
+        button_layout2.addWidget(self.run_terminal_btn)
+        
+        self.refresh_tools_btn = QPushButton("🔄 Refresh")
+        self.refresh_tools_btn.setToolTip("Refresh the tools list")
+        self.refresh_tools_btn.clicked.connect(self._refresh_tools)
+        button_layout2.addWidget(self.refresh_tools_btn)
+        
+        left_layout.addLayout(button_layout)
+        left_layout.addLayout(button_layout2)
+        
+        # Right side - Tool details
+        right_frame = QFrame()
+        right_layout = QVBoxLayout(right_frame)
+        
+        details_label = QLabel("Tool/Script Details")
+        details_label.setFont(QFont("Arial", 12, QFont.Bold))
+        right_layout.addWidget(details_label)
+        
+        # Tool details display
+        self.tool_details = QTextEdit()
+        self.tool_details.setReadOnly(True)
+        self.tool_details.setMaximumHeight(300)
+        right_layout.addWidget(self.tool_details)
+        
+        # Additional info section
+        info_label = QLabel("Execution Information")
+        info_label.setFont(QFont("Arial", 10, QFont.Bold))
+        right_layout.addWidget(info_label)
+        
+        # Info text
+        info_text = QTextEdit()
+        info_text.setReadOnly(True)
+        info_text.setMaximumHeight(150)
+        info_text.setHtml("""
+        <p><b>Execution Options:</b></p>
+        <ul>
+        <li><b>🚀 Run:</b> Execute normally in current process</li>
+        <li><b>🛡️ Run as Admin:</b> Execute with administrator privileges (required for some system tools)</li>
+        <li><b>🖥️ New Terminal:</b> Execute in a new terminal window for better visibility</li>
+        <li><b>🔄 Refresh:</b> Scan tools directory for new scripts</li>
+        </ul>
+        <p><b>Icons:</b> 🎮 GPU/Graphics, 💻 System, 🌐 Network, 🎯 Gaming, 🔧 General, 🛡️ Requires Admin</p>
+        """)
+        right_layout.addWidget(info_text)
+        
+        # Add to splitter
+        splitter = QSplitter(Qt.Horizontal)
+        splitter.addWidget(left_frame)
+        splitter.addWidget(right_frame)
+        splitter.setSizes([300, 600])
+        
+        layout.addWidget(splitter)
+        self.tabs.addTab(tab, "🔧 Tools")
+        
+        # Load tools
+        self._refresh_tools()
     
     def _create_settings_tab(self):
         """Create the application settings tab."""
@@ -349,13 +486,41 @@ class ControlPanel(FloatingPanel):
         self.tabs.addTab(tab, "Threads")
     
     def _create_logs_tab(self):
-        """Create the logs viewing tab."""
+        """Create the enhanced logs viewing tab."""
         tab = QWidget()
         layout = QVBoxLayout(tab)
         
         # Log controls
         log_controls = QHBoxLayout()
         
+        # Filter controls
+        filter_frame = QFrame()
+        filter_layout = QHBoxLayout(filter_frame)
+        filter_layout.addWidget(QLabel("Show:"))
+        
+        self.debug_cb = QCheckBox("Debug")
+        self.debug_cb.toggled.connect(lambda checked: self.log_display.set_level_filter('DEBUG', checked))
+        filter_layout.addWidget(self.debug_cb)
+        
+        self.info_cb = QCheckBox("Info")
+        self.info_cb.setChecked(True)
+        self.info_cb.toggled.connect(lambda checked: self.log_display.set_level_filter('INFO', checked))
+        filter_layout.addWidget(self.info_cb)
+        
+        self.warning_cb = QCheckBox("Warning")
+        self.warning_cb.setChecked(True)
+        self.warning_cb.toggled.connect(lambda checked: self.log_display.set_level_filter('WARNING', checked))
+        filter_layout.addWidget(self.warning_cb)
+        
+        self.error_cb = QCheckBox("Error")
+        self.error_cb.setChecked(True)
+        self.error_cb.toggled.connect(lambda checked: self.log_display.set_level_filter('ERROR', checked))
+        filter_layout.addWidget(self.error_cb)
+        
+        filter_layout.addStretch()
+        log_controls.addWidget(filter_frame)
+        
+        # Action buttons
         clear_logs_btn = QPushButton("Clear Logs")
         clear_logs_btn.clicked.connect(self._clear_logs)
         log_controls.addWidget(clear_logs_btn)
@@ -364,16 +529,13 @@ class ControlPanel(FloatingPanel):
         save_logs_btn.clicked.connect(self._save_logs)
         log_controls.addWidget(save_logs_btn)
         
-        log_controls.addStretch()
         layout.addLayout(log_controls)
         
-        # Log display
-        self.log_display = QTextEdit()
-        self.log_display.setReadOnly(True)
-        self.log_display.setFont(QFont("Consolas", 9))
+        # Enhanced log display
+        self.log_display = LogDisplay()
         layout.addWidget(self.log_display)
         
-        self.tabs.addTab(tab, "Logs")
+        self.tabs.addTab(tab, "📋 Logs")
     
     def _create_about_tab(self):
         """Create the about/help tab."""
@@ -618,6 +780,109 @@ class ControlPanel(FloatingPanel):
     def _refresh_status(self):
         """Refresh status information periodically."""
         self._refresh_thread_status()
+    
+    def _refresh_tools(self):
+        """Refresh the tools list."""
+        self.tool_list.clear()
+        
+        # Refresh tool manager
+        self.tool_manager.refresh_tools()
+        
+        # Add tools to list
+        tools = self.tool_manager.get_tools()
+        for tool_name, tool_info in tools.items():
+            tool_data = tool_info.to_dict()
+            item = ToolListItem(tool_name, tool_data)
+            self.tool_list.addItem(item)
+        
+        self.logger.info(f"Refreshed tools list: {len(tools)} tools found")
+    
+    def _on_tool_selected(self):
+        """Handle tool selection."""
+        current_item = self.tool_list.currentItem()
+        
+        if not current_item:
+            # Disable buttons when no tool selected
+            self.run_btn.setEnabled(False)
+            self.run_admin_btn.setEnabled(False)
+            self.run_terminal_btn.setEnabled(False)
+            self.tool_details.clear()
+            return
+        
+        tool_name = current_item.tool_name
+        tool_info = current_item.tool_info
+        
+        # Update tool details
+        details = f"""
+        <h3>🔧 {tool_info['name']}</h3>
+        <p><b>📁 File:</b> {tool_info['filename']}</p>
+        <p><b>📂 Path:</b> {tool_info['file_path']}</p>
+        <p><b>🏷️ Version:</b> {tool_info['version']}</p>
+        <p><b>👤 Author:</b> {tool_info['author']}</p>
+        <p><b>📋 Category:</b> {tool_info['category']}</p>
+        <p><b>🛡️ Requires Admin:</b> {'Yes' if tool_info['requires_admin'] else 'No'}</p>
+        <p><b>🖥️ GUI Application:</b> {'Yes' if tool_info['requires_gui'] else 'No'}</p>
+        
+        <h4>📝 Description</h4>
+        <p>{tool_info['description']}</p>
+        """
+        
+        self.tool_details.setHtml(details)
+        
+        # Enable buttons
+        self.run_btn.setEnabled(True)
+        self.run_admin_btn.setEnabled(True)
+        self.run_terminal_btn.setEnabled(True)
+        
+        # Update button text if admin is recommended
+        if tool_info['requires_admin']:
+            self.run_admin_btn.setText("🛡️ Run as Admin (Recommended)")
+        else:
+            self.run_admin_btn.setText("🛡️ Run as Admin")
+    
+    def _run_selected_tool(self):
+        """Run the selected tool normally."""
+        current_item = self.tool_list.currentItem()
+        if current_item:
+            tool_name = current_item.tool_name
+            self.logger.info(f"Running tool: {tool_name}")
+            
+            success = self.tool_manager.run_tool(tool_name, as_admin=False, new_terminal=False)
+            if success:
+                self.log_message(f"✅ Tool '{tool_name}' started successfully")
+            else:
+                self.log_message(f"❌ Failed to start tool '{tool_name}'")
+    
+    def _run_selected_tool_admin(self):
+        """Run the selected tool as administrator."""
+        current_item = self.tool_list.currentItem()
+        if current_item:
+            tool_name = current_item.tool_name
+            self.logger.info(f"Running tool as admin: {tool_name}")
+            
+            success = self.tool_manager.run_tool(tool_name, as_admin=True, new_terminal=False)
+            if success:
+                self.log_message(f"🛡️ Tool '{tool_name}' started as administrator")
+            else:
+                self.log_message(f"❌ Failed to start tool '{tool_name}' as administrator")
+    
+    def _run_selected_tool_terminal(self):
+        """Run the selected tool in a new terminal."""
+        current_item = self.tool_list.currentItem()
+        if current_item:
+            tool_name = current_item.tool_name
+            tool_info = current_item.tool_info
+            self.logger.info(f"Running tool in new terminal: {tool_name}")
+            
+            # Use admin if recommended
+            as_admin = tool_info.get('requires_admin', False)
+            success = self.tool_manager.run_tool(tool_name, as_admin=as_admin, new_terminal=True)
+            
+            if success:
+                admin_text = " (as admin)" if as_admin else ""
+                self.log_message(f"🖥️ Tool '{tool_name}' started in new terminal{admin_text}")
+            else:
+                self.log_message(f"❌ Failed to start tool '{tool_name}' in new terminal")
     
     def log_message(self, message: str):
         """Add a message to the log display."""

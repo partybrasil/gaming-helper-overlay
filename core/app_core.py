@@ -54,37 +54,41 @@ class GamingHelperApp(QObject):
             level=logging.INFO,
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler(log_dir / "gaming_helper.log"),
+                logging.FileHandler(log_dir / "gaming_helper.log", encoding='utf-8'),
                 logging.StreamHandler(sys.stdout)
             ]
         )
         
         self.logger = logging.getLogger("GamingHelperApp")
-        self.logger.info("Gaming Helper Overlay starting...")
+        self.logger.info("[ROCKET] Gaming Helper Overlay starting...")
     
     def initialize(self):
         """Initialize all application components."""
         try:
-            self.logger.info("Initializing Gaming Helper Overlay...")
+            self.logger.info("[SETUP] Initializing Gaming Helper Overlay...")
             
             # Initialize core managers
+            self.logger.info("[BUILD] Initializing core managers...")
             self._init_core_managers()
             
-            # Initialize UI components
+            # Initialize UI components  
+            self.logger.info("[UI] Initializing UI components...")
             self._init_ui_components()
             
             # Connect signals
+            self.logger.info("[CONNECT] Connecting component signals...")
             self._connect_signals()
             
             # Load and activate plugins
+            self.logger.info("[PLUGINS] Loading plugins...")
             self._load_plugins()
             
             # Show floating icon
             self.floating_icon.show()
-            self.logger.info("Floating icon shown")
+            self.logger.info("[DISPLAY] Floating icon displayed")
             
             self.is_initialized = True
-            self.logger.info("Gaming Helper Overlay initialized successfully!")
+            self.logger.info("[SUCCESS] Gaming Helper Overlay initialized successfully!")
             
         except Exception as e:
             self.logger.error(f"Failed to initialize application: {e}")
@@ -93,13 +97,16 @@ class GamingHelperApp(QObject):
     def _init_core_managers(self):
         """Initialize core management components."""
         # Config manager
+        self.logger.info("[CONFIG] Initializing Configuration Manager...")
         self.config_manager = ConfigManager()
         self.config_manager.load_config()
         
         # Thread manager
+        self.logger.info("[THREAD] Initializing Thread Manager...")
         self.thread_manager = ThreadManager()
         
         # Plugin manager
+        self.logger.info("[PLUGIN] Initializing Plugin Manager...")
         self.plugin_manager = PluginManager(
             config_manager=self.config_manager,
             thread_manager=self.thread_manager
@@ -108,12 +115,14 @@ class GamingHelperApp(QObject):
     def _init_ui_components(self):
         """Initialize UI components."""
         # Main window (hidden by default)
+        self.logger.info("[WINDOW] Creating Main Window...")
         self.main_window = MainWindow(
             config_manager=self.config_manager,
             plugin_manager=self.plugin_manager
         )
         
         # Control panel
+        self.logger.info("[PANEL] Creating Control Panel...")
         self.control_panel = ControlPanel(
             config_manager=self.config_manager,
             plugin_manager=self.plugin_manager,
@@ -121,12 +130,14 @@ class GamingHelperApp(QObject):
         )
         
         # Floating icon
+        self.logger.info("[ICON] Creating Floating Icon...")
         self.floating_icon = FloatingIcon(
             config_manager=self.config_manager,
             control_panel=self.control_panel
         )
         
         # System tray
+        self.logger.info("[TRAY] Creating System Tray...")
         self.tray_manager = SystemTrayManager(
             config_manager=self.config_manager
         )
@@ -159,11 +170,11 @@ class GamingHelperApp(QObject):
     
     def _on_plugin_activated(self, plugin_name):
         """Handle plugin activation."""
-        self.logger.info(f"Plugin activated: {plugin_name}")
+        self.logger.info(f"[PLUGIN-ON] Plugin activated: {plugin_name}")
     
     def _on_plugin_deactivated(self, plugin_name):
         """Handle plugin deactivation."""
-        self.logger.info(f"Plugin deactivated: {plugin_name}")
+        self.logger.info(f"[PLUGIN-OFF] Plugin deactivated: {plugin_name}")
     
     def _show_control_panel(self):
         """Show control panel."""
@@ -186,32 +197,39 @@ class GamingHelperApp(QObject):
             return
             
         self.is_shutting_down = True
-        self.logger.info("Shutting down Gaming Helper Overlay...")
+        self.logger.info("[SHUTDOWN] Shutting down Gaming Helper Overlay...")
         
         try:
             # Save configuration
             if self.config_manager:
+                self.logger.info("[SAVE] Saving configuration...")
                 self.config_manager.save_config()
             
             # Shutdown plugins
             if self.plugin_manager:
+                self.logger.info("[PLUGINS] Shutting down plugins...")
                 self.plugin_manager.shutdown_all_plugins()
             
             # Shutdown threads
             if self.thread_manager:
+                self.logger.info("[THREADS] Shutting down threads...")
                 self.thread_manager.shutdown_all_threads()
             
             # Close UI components
             if self.control_panel:
+                self.logger.info("[PANEL] Closing Control Panel...")
                 self.control_panel.close()
             
             if self.floating_icon:
+                self.logger.info("[ICON] Closing Floating Icon...")
                 self.floating_icon.close()
             
             if self.main_window:
+                self.logger.info("[WINDOW] Closing Main Window...")
                 self.main_window.close()
             
             # Quit application
+            self.logger.info("[EXIT] Application shutdown complete")
             QApplication.quit()
             
         except Exception as e:
