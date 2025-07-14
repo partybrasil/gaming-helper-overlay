@@ -3,9 +3,9 @@ Gaming Helper Overlay - Version Information
 """
 
 __version__ = "1.0.0"
-__author__ = "Party Brasil"
+__author__ = "PartyBrasil"
 __email__ = "contact@partybrasil.dev"
-__description__ = "Advanced gaming helper overlay with customizable plugins"
+__description__ = "Una aplicación de overlay modular para gaming con paneles flotantes y sistema de plugins extensible, construida con PySide6 para Windows 11."
 __url__ = "https://github.com/partybrasil/gaming-helper-overlay"
 __license__ = "MIT"
 
@@ -16,7 +16,7 @@ VERSION_PATCH = 0
 VERSION_BUILD = "stable"
 
 # Build information
-BUILD_DATE = "2024-01-01"
+BUILD_DATE = "2025-07-13"
 BUILD_TYPE = "release"  # release, beta, alpha, dev
 
 # Compatibility information
@@ -34,7 +34,7 @@ DEPENDENCIES = {
 # Application metadata
 APP_NAME = "Gaming Helper Overlay"
 APP_DISPLAY_NAME = "Gaming Helper Overlay"
-APP_DESCRIPTION = "Advanced gaming helper overlay with customizable plugins for enhanced gaming experience"
+APP_DESCRIPTION = "Una aplicación de overlay modular para gaming con paneles flotantes y sistema de plugins extensible, construida con PySide6 para Windows 11."
 APP_KEYWORDS = ["gaming", "overlay", "helper", "crosshair", "fps", "monitor", "streaming"]
 
 # API version for plugins
