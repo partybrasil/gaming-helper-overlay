@@ -1,12 +1,10 @@
 app:
   always_on_top: false
   auto_start: false
-  check_updates: true
+  debug: false
   first_run: true
-  language: es
   minimize_to_tray: true
   name: Gaming Helper Overlay
-  startup_delay: 2.0
   theme: dark
   transparency_enabled: true
   version: 1.0.0
@@ -24,11 +22,12 @@ control_panel:
 floating_icon:
   always_on_top: true
   draggable: true
+  enabled: true
   icon_path: assets/icons/app_icon.png
-  opacity: 1.0
+  opacity: 0.8980392156862745
   position:
-    x: 1811
-    y: 906
+    x: 3
+    y: 783
   size:
     height: 50
     width: 50
@@ -36,49 +35,24 @@ hotkeys:
   emergency_hide: Ctrl+Shift+H
   toggle_all_panels: Ctrl+Shift+A
   toggle_control_panel: Ctrl+Shift+G
-keybinds:
-  emergency_hide: Ctrl+Shift+H
-  low_cpu_mode: false
-  memory_limit_mb: 500
-  toggle_control_panel: Ctrl+Shift+C
-  toggle_overlay: Ctrl+Shift+O
-logging:
-  backup_count: 5
-  level: INFO
-  log_to_console: false
-  log_to_file: true
-  max_file_size: 10MB
-main_window:
-  maximized: false
-  position:
-    x: 300
-    y: 300
-  size:
-    height: 400
-    width: 500
 performance:
   fps_limit: 60
   low_cpu_mode: false
   max_threads: 10
-  memory_limit: 512
   memory_limit_mb: 500
-  thread_pool_size: 4
 plugins:
-  auto_discover: true
   auto_load: true
   check_updates: true
   enabled:
-  - cpu_gpu_monitor
+  - anti-afk_emulation
 ui:
-  always_on_top: false
+  always_on_top: true
   animations: true
   blur_background: true
   border_color: '#3498db'
   border_width: 2
   custom_borders: true
-  font_family: Segoe UI
-  font_size: 12
   glass_effect: true
+  opacity: 0.9
   smooth_transitions: true
-  theme: light
-  transparency_enabled: true
+  theme: auto

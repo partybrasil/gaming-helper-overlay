@@ -415,6 +415,241 @@ gaming-helper-overlay/                    # 📦 Proyecto Principal
 
 ---
 
+## 🧪 Testing y Verificación
+
+### 🚀 **Ejecutar Tests**
+
+El Gaming Helper Overlay incluye un sistema completo de testing con **49 pruebas** que verifican todos los componentes de la aplicación.
+
+#### **Ejecución Básica**
+
+```bash
+# 🎯 Ejecutar todos los tests (recomendado)
+python test_suite.py
+
+# 🔍 Ejecutar con salida detallada
+python -m unittest test_suite.py -v
+
+# 📊 Ejecutar con buffer (sin output durante ejecución)
+python -m unittest test_suite.py -b
+```
+
+#### **Salida Esperada** ✅
+
+```
+╔═══════════════════════════════════════════════════════════════╗
+║              🎮 GAMING HELPER OVERLAY - TEST SUITE           ║
+╠═══════════════════════════════════════════════════════════════╣
+║                   Sistema de Pruebas Completo                ║
+╚═══════════════════════════════════════════════════════════════╝
+
+🔧 INICIALIZANDO SUITE DE PRUEBAS
+  ℹ Agregando 14 grupos de pruebas...
+  ✓ Suite de pruebas inicializada correctamente
+
+🚀 EJECUTANDO PRUEBAS
+[Ejecutando 49 tests con feedback visual en tiempo real...]
+
+📊 RESUMEN DE PRUEBAS
+📈 ESTADÍSTICAS GENERALES:
+  • Total ejecutadas: 49
+  • Exitosas: 49  
+  • Fallidas: 0
+  • Errores: 0
+  • Saltadas: 1
+
+📊 ESTADÍSTICAS:
+Tasa de éxito: 100.0%
+🎉 ¡Excelente! La aplicación está en muy buen estado.
+```
+
+### 🎯 **Tests Específicos**
+
+#### **Por Categoría**
+
+```bash
+# 🌟 Tests de entorno y configuración básica
+python -m unittest test_suite.TestEnvironment -v
+
+# 📦 Tests de dependencias y librerías
+python -m unittest test_suite.TestDependencies -v
+
+# ⚙️ Tests de módulos principales
+python -m unittest test_suite.TestCoreModules -v
+
+# 🔧 Tests de configuración YAML
+python -m unittest test_suite.TestConfiguration -v
+
+# 🔌 Tests del sistema de plugins
+python -m unittest test_suite.TestPluginSystem -v
+
+# 🚀 Tests de aplicación principal
+python -m unittest test_suite.TestApplication -v
+
+# 🖥️ Tests de interfaz de usuario
+python -m unittest test_suite.TestUIComponents -v
+
+# ⚡ Tests de rendimiento
+python -m unittest test_suite.TestPerformance -v
+```
+
+#### **Tests Individuales**
+
+```bash
+# 🐍 Verificar versión de Python
+python -m unittest test_suite.TestEnvironment.test_python_version -v
+
+# 🎨 Verificar PySide6 (Qt6)
+python -m unittest test_suite.TestDependencies.test_pyside6_import -v
+
+# 🔌 Verificar carga de plugins
+python -m unittest test_suite.TestPluginSystem.test_plugin_discovery -v
+
+# 🎯 Verificar plugin específico (ej: Crosshair)
+python -m unittest test_suite.TestSpecificPlugins.test_crosshair_plugin -v
+```
+
+### 📊 **Cobertura de Tests**
+
+| Categoría | Tests | Descripción | Estado |
+|-----------|-------|-------------|--------|
+| 🌟 **Entorno** | 4 | Versión Python, estructura, archivos | ✅ 100% |
+| 📦 **Dependencias** | 6 | PySide6, PyYAML, psutil, requests | ✅ 100% |
+| ⚙️ **Módulos Core** | 5 | app_core, config_manager, plugin_manager | ✅ 100% |
+| 🔧 **Configuración** | 5 | Archivos YAML, carga, valores por defecto | ✅ 100% |
+| 🔌 **Sistema Plugins** | 3 | Descubrimiento, carga, metadata | ✅ 100% |
+| 🚀 **Aplicación** | 3 | main.py, AppCore, configuración Qt | ✅ 100% |
+| 🖥️ **Componentes UI** | 4 | FloatingPanel, ControlPanel, IconWidget | ✅ 100% |
+| 🧵 **Threading** | 2 | ThreadManager, estadísticas | ✅ 100% |
+| 🛠️ **Herramientas** | 2 | Descubrimiento, información | ✅ 100% |
+| 🎯 **Plugins Específicos** | 5 | Crosshair, FPS, Anti-AFK, Macros, Monitor | ✅ 100% |
+| 📁 **Assets** | 2 | AssetManager, recursos por defecto | ✅ 100% |
+| 📂 **Estructura** | 4 | Archivos, directorios, scripts | ✅ 100% |
+| 🔗 **Integración** | 2 | Importaciones, config-plugins | ✅ 100% |
+| ⚡ **Rendimiento** | 2 | Importación, configuración | ✅ 100% |
+
+### 🔍 **Diagnosis y Troubleshooting**
+
+#### **Script de Diagnosis Rápida**
+
+```bash
+# Crear script de verificación automática
+cat > quick_check.py << 'EOF'
+import sys
+from pathlib import Path
+
+def quick_diagnosis():
+    print("🔍 Gaming Helper Overlay - Quick Check")
+    print("=" * 40)
+    
+    # Verificar Python
+    version = sys.version_info
+    if version >= (3, 10):
+        print(f"✅ Python {version.major}.{version.minor}")
+    else:
+        print(f"❌ Python {version.major}.{version.minor} (need 3.10+)")
+        return False
+    
+    # Verificar dependencias críticas
+    deps = ['PySide6', 'yaml', 'psutil', 'requests']
+    for dep in deps:
+        try:
+            __import__(dep)
+            print(f"✅ {dep}")
+        except ImportError:
+            print(f"❌ {dep} - Run: pip install -r requirements.txt")
+            return False
+    
+    # Verificar archivos principales
+    files = ['main.py', 'config/config.yaml', 'core/app_core.py']
+    for file in files:
+        if Path(file).exists():
+            print(f"✅ {file}")
+        else:
+            print(f"❌ {file} missing")
+            return False
+    
+    print("\n🎉 All checks passed! Ready to run:")
+    print("   python main.py")
+    print("   python test_suite.py")
+    return True
+
+if __name__ == '__main__':
+    quick_diagnosis()
+EOF
+
+python quick_check.py
+```
+
+#### **Problemas Comunes**
+
+| Problema | Síntoma | Solución |
+|----------|---------|----------|
+| **PySide6 faltante** | `No module named 'PySide6'` | `pip install PySide6>=6.5.0` |
+| **Config no encontrada** | `config.yaml not found` | Verificar directorio `config/` |
+| **Plugins no cargan** | `Plugin discovery failed` | Verificar directorio `plugins/` |
+| **Threading error** | `ThreadManager failed` | Reiniciar aplicación |
+
+### 📚 **Documentación de Testing**
+
+Para documentación completa de testing, incluyendo:
+- ✅ **Todos los modos de ejecución**
+- ✅ **Tests específicos por componente**
+- ✅ **Interpretación de resultados**
+- ✅ **Solución de problemas avanzada**
+- ✅ **API de testing y desarrollo**
+
+**📖 Ver:** [`docs/TESTING_GUIDE.md`](docs/TESTING_GUIDE.md)
+
+### 🎯 **Casos de Uso de Testing**
+
+#### **🔧 Durante Desarrollo**
+```bash
+# Después de modificar código core
+python -m unittest test_suite.TestCoreModules -v
+
+# Después de crear/modificar plugin
+python -m unittest test_suite.TestSpecificPlugins -v
+
+# Verificar rendimiento después de optimizaciones
+python -m unittest test_suite.TestPerformance -v
+```
+
+#### **📦 Después de Instalación**
+```bash
+# Verificación completa post-instalación
+python test_suite.py
+
+# Si hay problemas, diagnosis paso a paso
+python quick_check.py
+python -m unittest test_suite.TestEnvironment -v
+python -m unittest test_suite.TestDependencies -v
+```
+
+#### **🚀 Antes de Deployment**
+```bash
+# Verificación completa antes de usar en producción
+python test_suite.py
+
+# Si éxito = 100%, la aplicación está lista
+# Si éxito < 100%, revisar errores específicos
+```
+
+#### **🔍 Diagnosis de Problemas**
+```bash
+# Si la app no inicia correctamente
+python -m unittest test_suite.TestApplication -v
+
+# Si plugins fallan
+python -m unittest test_suite.TestPluginSystem -v
+python -m unittest test_suite.TestSpecificPlugins -v
+
+# Si hay problemas de UI
+python -m unittest test_suite.TestUIComponents -v
+```
+
+---
+
 ## 🔍 Requisitos del Sistema
 
 ### ✅ **Mínimos** (Verificados)
