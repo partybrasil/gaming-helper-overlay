@@ -263,56 +263,108 @@ Características:
 
 ```
 gaming-helper-overlay/                    # 📦 Proyecto Principal
-├── 📄 main.py                           # ✅ Punto de entrada
+├── 📄 main.py                           # ✅ Punto de entrada principal
 ├── 📄 requirements.txt                   # ✅ Dependencias Python
-├── 📄 version.py                        # ✅ Información de versión
-├── 📄 run.bat / run.ps1                # ✅ Scripts de inicio
-├── 📄 test_suite.py                     # ✅ Suite de pruebas
+├── 📄 version.py                        # ✅ Información de versión y metadata
+├── 📄 run.bat                          # ✅ Script de inicio Windows
+├── 📄 run.ps1                          # ✅ Script PowerShell
+├── 📄 test_suite.py                     # ✅ Suite completa de pruebas
+├── 📄 test_suite_updated.py            # ✅ Suite de pruebas actualizada
+├── 📄 run_tests.py                     # ✅ Ejecutor de tests con opciones
+├── 📄 setup_tests.ps1                  # ✅ Configuración de entorno de testing
+├── 📄 create_icon.py                   # ✅ Generador de iconos
+├── 📄 fix_icon.py                      # ✅ Reparador de configuración de iconos
+├── 📄 test_config.py                   # ✅ Script de configuración de tests
+├── 📄 test_config.bat                  # ✅ Configuración tests Windows
+├── 📄 test_config.sh                   # ✅ Configuración tests Unix
+├── 📄 test_anti_afk.py                 # ✅ Tests específicos Anti-AFK
+├── 📄 test_multi_hotkey_macros.py      # ✅ Tests específicos Macros
+├── 📄 .gitignore                       # ✅ Configuración Git
+├── 📄 CHANGELOG.md                     # ✅ Historial de cambios
+├── 📄 INSTALLATION.md                  # ✅ Guía de instalación
+├── 📄 LICENSE                          # ✅ Licencia MIT
+├── 📄 PROJECT_COMPLETED.md             # ✅ Documentación de finalización
+│
+├── 📁 .vscode/                          # ✅ Configuración VS Code
+│   └── 📄 tasks.json                   # ✅ Tareas del proyecto
 │
 ├── 📁 core/                             # ✅ Núcleo del Sistema
-│   ├── 📄 app_core.py                  # ✅ Controlador principal
-│   ├── 📄 config_manager.py            # ✅ Gestor de configuración
-│   ├── 📄 plugin_manager.py            # ✅ Sistema de plugins
-│   └── 📄 thread_manager.py            # ✅ Gestor de hilos
+│   ├── 📄 __init__.py                  # ✅ Inicializador del módulo
+│   ├── 📄 app_core.py                  # ✅ Controlador principal de la aplicación
+│   ├── 📄 config_manager.py            # ✅ Gestor de configuración YAML
+│   ├── 📄 plugin_manager.py            # ✅ Sistema de plugins dinámico
+│   ├── 📄 thread_manager.py            # ✅ Gestor de hilos y tareas
+│   └── 📄 tool_manager.py              # ✅ Gestor de herramientas externas
 │
 ├── 📁 ui/                               # ✅ Interfaz de Usuario
+│   ├── 📄 __init__.py                  # ✅ Inicializador del módulo
 │   ├── 📄 floating_panel.py            # ✅ Paneles flotantes base
 │   ├── 📄 control_panel.py             # ✅ Panel de control principal
-│   ├── 📄 icon_widget.py               # ✅ Icono flotante
-│   ├── 📄 main_window.py               # ✅ Ventana principal
-│   └── 📄 assets_manager.py            # ✅ Gestor de assets
+│   ├── 📄 icon_widget.py               # ✅ Icono flotante y bandeja
+│   ├── 📄 main_window.py               # ✅ Ventana principal (opcional)
+│   ├── 📄 assets_manager.py            # ✅ Gestor de recursos
+│   ├── 📄 log_display.py               # ✅ Visor de logs mejorado
+│   └── 📄 log_display_old.py           # ✅ Versión anterior del visor
 │
 ├── 📁 plugins/                          # ✅ Plugins Integrados
-│   ├── 📄 anti_afk.py                  # ✅ Plugin anti-AFK
-│   ├── 📄 multi_hotkey_macros.py       # ✅ Plugin de macros avanzados
-│   ├── 📄 crosshair.py                 # ✅ Plugin de mira
-│   ├── 📄 fps_counter.py               # ✅ Contador de FPS
-│   └── 📄 cpu_gpu_monitor.py           # ✅ Monitor de sistema
+│   ├── 📄 __init__.py                  # ✅ Inicializador del módulo
+│   ├── 📄 anti_afk.py                  # ✅ Plugin Anti-AFK básico
+│   ├── 📄 anti_afk_advanced.py         # ✅ Configuración avanzada Anti-AFK
+│   ├── 📄 multi_hotkey_macros.py       # ✅ Plugin de macros y hotkeys
+│   ├── 📄 crosshair.py                 # ✅ Plugin de mira customizable
+│   ├── 📄 crosshair_old.py             # ✅ Versión anterior del crosshair
+│   ├── 📄 fps_counter.py               # ✅ Contador de FPS en tiempo real
+│   ├── 📄 cpu_gpu_monitor.py           # ✅ Monitor de recursos del sistema
+│   ├── 📄 README_ANTI_AFK.md           # ✅ Documentación Anti-AFK
+│   └── 📄 README_MULTI_HOTKEY_MACROS.md # ✅ Documentación Macros
 │
 ├── 📁 config/                           # ✅ Configuraciones
-│   ├── 📄 config.yaml                  # ✅ Config principal
-│   └── 📁 plugins/                     # ✅ Configs por plugin
-│       ├── 📄 crosshair.yaml
-│       ├── 📄 fps_counter.yaml
-│       └── 📄 cpu_gpu_monitor.yaml
+│   ├── 📄 config.yaml                  # ✅ Configuración principal
+│   ├── 📄 README.md                    # ✅ Documentación de configuración
+│   └── 📁 plugins/                     # ✅ Configuraciones por plugin
+│       ├── 📄 anti_afk.yaml            # ✅ Config Anti-AFK básico
+│       ├── 📄 anti-afk_emulation.yaml  # ✅ Config Anti-AFK emulación
+│       ├── 📄 crosshair.yaml           # ✅ Config crosshair básico
+│       ├── 📄 crosshair_overlay.yaml   # ✅ Config crosshair overlay
+│       ├── 📄 fps_counter.yaml         # ✅ Config contador FPS
+│       ├── 📄 cpu_gpu_monitor.yaml     # ✅ Config monitor sistema
+│       ├── 📄 multi_hotkey_macros.yaml # ✅ Config macros detallado
+│       └── 📄 multi-hotkey_macros.yaml # ✅ Config macros simplificado
 │
-├── 📁 data/                             # ✅ Datos de Usuario
-│   ├── 📁 logs/                        # ✅ Archivos de log
-│   ├── 📁 cache/                       # ✅ Cache temporal
-│   ├── 📁 user_data/                   # ✅ Datos personalizados
-│   └── 📁 plugins/                     # ✅ Datos de plugins
+├── 📁 data/                             # ✅ Datos de Usuario y Runtime
+│   ├── � README.md                    # ✅ Documentación de datos
+│   └── �📁 (directorios dinámicos)      # ✅ Creados automáticamente:
+│       ├── 📁 logs/                    # ✅ Archivos de log
+│       ├── 📁 cache/                   # ✅ Cache temporal
+│       ├── 📁 user_data/               # ✅ Datos personalizados
+│       ├── 📁 plugins/                 # ✅ Datos de plugins
+│       └── 📁 temp/                    # ✅ Archivos temporales
 │
-├── 📁 assets/                           # ✅ Recursos
+├── 📁 logs/                             # ✅ Logs Actuales (Runtime)
+│   └── 📄 gaming_helper.log            # ✅ Log principal de la aplicación
+│
+├── 📁 assets/                           # ✅ Recursos Multimedia
 │   ├── 📁 icons/                       # ✅ Iconos y gráficos
+│   │   └── 📄 app_icon.png             # ✅ Icono principal de la aplicación
 │   ├── 📁 sounds/                      # ✅ Efectos de sonido
-│   └── 📁 animations/                  # ✅ Animaciones
+│   ├── 📁 animations/                  # ✅ Animaciones
+│   └── 📁 backgrounds/                 # ✅ Fondos y texturas
 │
-└── 📁 docs/                             # ✅ Documentación
-    ├── 📄 PLUGIN_DEVELOPMENT.md        # ✅ Desarrollo de plugins
-    ├── 📄 ARCHITECTURE.md              # ✅ Arquitectura del sistema
-    ├── 📄 INSTALLATION.md              # ✅ Guía de instalación
-    ├── 📄 CHANGELOG.md                 # ✅ Historial de cambios
-    └── 📄 LICENSE                      # ✅ Licencia MIT
+├── 📁 tools/                            # ✅ Herramientas Auxiliares
+│   ├── 📄 __init__.py                  # ✅ Inicializador del módulo
+│   └── 📄 RTX-DIAG.py                  # ✅ Herramienta diagnóstico RTX/GPU
+│
+├── 📁 docs/                             # ✅ Documentación Técnica
+│   ├── 📄 PLUGIN_DEVELOPMENT.md        # ✅ Guía desarrollo de plugins
+│   ├── 📄 ARCHITECTURE.md              # ✅ Arquitectura del sistema
+│   └── 📄 TESTING_GUIDE.md             # ✅ Guía completa de testing
+│
+└── 📁 __pycache__/                      # ✅ Cache Python (auto-generado)
+    ├── 📄 create_icon.cpython-313.pyc
+    ├── 📄 fix_icon.cpython-313.pyc
+    ├── 📄 main.cpython-313.pyc
+    ├── 📄 test_suite.cpython-313.pyc
+    └── 📄 version.cpython-313.pyc
 ```
 
 ---
