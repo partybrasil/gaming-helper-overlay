@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://python.org)
 [![PySide6](https://img.shields.io/badge/PySide6-6.5+-green.svg)](https://doc.qt.io/qtforpython/)
 [![Windows](https://img.shields.io/badge/platform-Windows%2011-lightgrey.svg)](https://www.microsoft.com/windows)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-GPL3.0-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-Active%20Development-brightgreen.svg)](https://github.com/partybrasil/gaming-helper-overlay)
 
 > **Una aplicación de overlay modular para gaming con paneles flotantes y sistema de plugins extensible, construida con PySide6 para Windows 11.**
