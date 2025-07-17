@@ -2457,3 +2457,110 @@
 2025-07-14 01:42:23,388 - GamingHelperApp - INFO - [ICON] Closing Floating Icon...
 2025-07-14 01:42:23,390 - GamingHelperApp - INFO - [WINDOW] Closing Main Window...
 2025-07-14 01:42:23,390 - GamingHelperApp - INFO - [EXIT] Application shutdown complete
+2025-07-14 10:29:10,674 - GamingHelperApp - INFO - [ROCKET] Gaming Helper Overlay starting...
+2025-07-14 10:29:10,675 - GamingHelperApp - INFO - [SETUP] Initializing Gaming Helper Overlay...
+2025-07-14 10:29:10,675 - GamingHelperApp - INFO - [BUILD] Initializing core managers...
+2025-07-14 10:29:10,675 - GamingHelperApp - INFO - [CONFIG] Initializing Configuration Manager...
+2025-07-14 10:29:10,678 - ConfigManager - INFO - Configuration loaded successfully
+2025-07-14 10:29:10,679 - GamingHelperApp - INFO - [THREAD] Initializing Thread Manager...
+2025-07-14 10:29:10,681 - GamingHelperApp - INFO - [PLUGIN] Initializing Plugin Manager...
+2025-07-14 10:29:10,681 - GamingHelperApp - INFO - [UI] Initializing UI components...
+2025-07-14 10:29:10,681 - GamingHelperApp - INFO - [WINDOW] Creating Main Window...
+2025-07-14 10:29:10,762 - GamingHelperApp - INFO - [PANEL] Creating Control Panel...
+2025-07-14 10:29:10,805 - ToolManager - INFO - Discovered 1 tools
+2025-07-14 10:29:14,061 - PluginManager - INFO - Discovered plugin: Anti-AFK Emulation
+2025-07-14 10:29:14,218 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-14 10:29:14,221 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-14 10:29:14,224 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-14 10:29:14,227 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-14 10:29:14,508 - PluginManager - INFO - Discovered plugin: Multi-Hotkey Macros
+2025-07-14 10:29:14,508 - PluginManager - INFO - Discovered 6 plugins
+2025-07-14 10:29:14,518 - ToolManager - INFO - Refreshing tools...
+2025-07-14 10:29:14,543 - ToolManager - INFO - Discovered 1 tools
+2025-07-14 10:29:14,548 - ControlPanel - INFO - Refreshed tools list: 1 tools found
+2025-07-14 10:29:14,603 - GamingHelperApp - INFO - [ICON] Creating Floating Icon...
+2025-07-14 10:29:14,604 - FloatingIcon - INFO - FloatingIcon size set to: 50x50
+2025-07-14 10:29:14,620 - FloatingIcon - INFO - Icon loaded and scaled to: 50x50
+2025-07-14 10:29:14,622 - FloatingIcon - INFO - FloatingIcon final size after initialization: 50x50
+2025-07-14 10:29:14,624 - FloatingIcon - INFO - FloatingIcon initialized successfully
+2025-07-14 10:29:14,625 - GamingHelperApp - INFO - [TRAY] Creating System Tray...
+2025-07-14 10:29:14,701 - SystemTrayManager - INFO - System tray icon created
+2025-07-14 10:29:14,702 - GamingHelperApp - INFO - [CONNECT] Connecting component signals...
+2025-07-14 10:29:14,707 - GamingHelperApp - INFO - [PLUGINS] Loading plugins...
+2025-07-14 10:29:14,713 - PluginManager - INFO - Discovered plugin: Anti-AFK Emulation
+2025-07-14 10:29:14,718 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-14 10:29:14,725 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-14 10:29:14,727 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-14 10:29:14,729 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-14 10:29:14,734 - PluginManager - INFO - Discovered plugin: Multi-Hotkey Macros
+2025-07-14 10:29:14,735 - PluginManager - INFO - Discovered 6 plugins
+2025-07-14 10:29:14,736 - PluginManager - INFO - [PLUGINS] Loading available plugins (all will start INACTIVE)
+2025-07-14 10:29:14,740 - PluginManager - INFO - [PLUGIN] Loaded plugin: Anti-AFK Emulation
+2025-07-14 10:29:14,741 - PluginManager - INFO - [PLUGIN] Loaded plugin 'Anti-AFK Emulation' (INACTIVE by default)
+2025-07-14 10:29:14,745 - PluginManager - INFO - [PLUGIN] Loaded plugin: CPU/GPU Monitor
+2025-07-14 10:29:14,751 - PluginManager - INFO - [PLUGIN] Loaded plugin 'CPU/GPU Monitor' (INACTIVE by default)
+2025-07-14 10:29:14,754 - PluginManager - INFO - [PLUGIN] Loaded plugin: Crosshair Overlay
+2025-07-14 10:29:14,755 - PluginManager - INFO - [PLUGIN] Loaded plugin 'Crosshair Overlay' (INACTIVE by default)
+2025-07-14 10:29:14,757 - PluginManager - INFO - [PLUGIN] Loaded plugin: FPS Counter
+2025-07-14 10:29:14,758 - PluginManager - INFO - [PLUGIN] Loaded plugin 'FPS Counter' (INACTIVE by default)
+2025-07-14 10:29:14,766 - PluginManager - INFO - [PLUGIN] Loaded plugin: Multi-Hotkey Macros
+2025-07-14 10:29:14,767 - PluginManager - INFO - [PLUGIN] Loaded plugin 'Multi-Hotkey Macros' (INACTIVE by default)
+2025-07-14 10:29:14,768 - PluginManager - INFO - [BLOCKED] All plugins loaded in INACTIVE state - no auto-activation
+2025-07-14 10:29:14,773 - FloatingIcon - INFO - FloatingIcon resize event: -1x-1 -> 50x50
+2025-07-14 10:29:14,783 - FloatingIcon - INFO - Icon loaded and scaled to: 50x50
+2025-07-14 10:29:14,787 - FloatingIcon - INFO - FloatingIcon shown at position (100, 100) with size 50x50
+2025-07-14 10:29:14,790 - GamingHelperApp - INFO - [DISPLAY] Floating icon displayed
+2025-07-14 10:29:14,796 - GamingHelperApp - INFO - [SUCCESS] Gaming Helper Overlay initialized successfully!
+2025-07-14 10:29:40,331 - ControlPanel - INFO - Applied theme: auto
+2025-07-14 10:29:47,240 - ControlPanel - INFO - Running tool: RTX-DIAG
+2025-07-14 10:29:47,242 - ToolManager - INFO - Running tool: RTX-DIAG (admin=False, new_terminal=False)
+2025-07-14 10:30:05,693 - Plugin.Anti-AFK Emulation - INFO - Anti-AFK plugin initialized successfully
+2025-07-14 10:30:05,695 - Plugin.Anti-AFK Emulation - INFO - Plugin 'Anti-AFK Emulation' initialized
+2025-07-14 10:30:05,703 - PluginManager - INFO - Discovered plugin: Anti-AFK Emulation
+2025-07-14 10:30:05,707 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-14 10:30:05,710 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-14 10:30:05,712 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-14 10:30:05,716 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-14 10:30:05,723 - PluginManager - INFO - Discovered plugin: Multi-Hotkey Macros
+2025-07-14 10:30:05,725 - PluginManager - INFO - Discovered 6 plugins
+2025-07-14 10:30:05,735 - GamingHelperApp - INFO - [PLUGIN-ON] Plugin activated: Anti-AFK Emulation
+2025-07-14 10:30:05,738 - Plugin.Anti-AFK Emulation - INFO - Plugin 'Anti-AFK Emulation' activated
+2025-07-14 10:30:12,327 - PluginManager - INFO - Discovered plugin: Anti-AFK Emulation
+2025-07-14 10:30:12,330 - PluginManager - INFO - Discovered plugin: CPU/GPU Monitor
+2025-07-14 10:30:12,333 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-14 10:30:12,336 - PluginManager - INFO - Discovered plugin: Crosshair Overlay
+2025-07-14 10:30:12,340 - PluginManager - INFO - Discovered plugin: FPS Counter
+2025-07-14 10:30:12,349 - PluginManager - INFO - Discovered plugin: Multi-Hotkey Macros
+2025-07-14 10:30:12,352 - PluginManager - INFO - Discovered 6 plugins
+2025-07-14 10:30:12,355 - GamingHelperApp - INFO - [PLUGIN-OFF] Plugin deactivated: Anti-AFK Emulation
+2025-07-14 10:30:12,364 - Plugin.Anti-AFK Emulation - INFO - Plugin 'Anti-AFK Emulation' deactivated
+2025-07-14 10:30:34,465 - GamingHelperApp - INFO - [SHUTDOWN] Shutting down Gaming Helper Overlay...
+2025-07-14 10:30:34,468 - GamingHelperApp - INFO - [SAVE] Saving configuration...
+2025-07-14 10:30:34,473 - ConfigManager - INFO - Configuration saved successfully
+2025-07-14 10:30:34,475 - GamingHelperApp - INFO - [PLUGINS] Shutting down plugins...
+2025-07-14 10:30:34,479 - PluginManager - INFO - [PLUGIN] Shutting down all plugins...
+2025-07-14 10:30:34,481 - PluginManager - INFO - [PLUGIN] Unloading plugin: Anti-AFK Emulation
+2025-07-14 10:30:34,491 - Plugin.Anti-AFK Emulation - INFO - Plugin 'Anti-AFK Emulation' shut down
+2025-07-14 10:30:34,493 - PluginManager - INFO - Unloaded plugin: Anti-AFK Emulation
+2025-07-14 10:30:34,502 - PluginManager - INFO - [PLUGIN] Unloading plugin: CPU/GPU Monitor
+2025-07-14 10:30:34,504 - Plugin.CPU/GPU Monitor - INFO - Plugin 'CPU/GPU Monitor' shut down
+2025-07-14 10:30:34,505 - PluginManager - INFO - Unloaded plugin: CPU/GPU Monitor
+2025-07-14 10:30:34,508 - PluginManager - INFO - [PLUGIN] Unloading plugin: Crosshair Overlay
+2025-07-14 10:30:34,511 - Plugin.Crosshair Overlay - INFO - Plugin 'Crosshair Overlay' shut down
+2025-07-14 10:30:34,520 - PluginManager - INFO - Unloaded plugin: Crosshair Overlay
+2025-07-14 10:30:34,523 - PluginManager - INFO - [PLUGIN] Unloading plugin: FPS Counter
+2025-07-14 10:30:34,525 - Plugin.FPS Counter - INFO - Plugin 'FPS Counter' shut down
+2025-07-14 10:30:34,536 - PluginManager - INFO - Unloaded plugin: FPS Counter
+2025-07-14 10:30:34,539 - PluginManager - INFO - [PLUGIN] Unloading plugin: Multi-Hotkey Macros
+2025-07-14 10:30:34,541 - Plugin.Multi-Hotkey Macros - ERROR - Error stopping hotkey listener: '_KeyboardListener' object has no attribute 'blocking_hotkeys'
+2025-07-14 10:30:34,556 - Plugin.Multi-Hotkey Macros - INFO - Saved 0 macros
+2025-07-14 10:30:34,559 - Plugin.Multi-Hotkey Macros - INFO - Multi-Hotkey Macros plugin shutdown complete
+2025-07-14 10:30:34,567 - PluginManager - INFO - Unloaded plugin: Multi-Hotkey Macros
+2025-07-14 10:30:34,573 - PluginManager - INFO - [SUCCESS] All plugins shut down
+2025-07-14 10:30:34,638 - GamingHelperApp - INFO - [THREADS] Shutting down threads...
+2025-07-14 10:30:34,655 - ThreadManager - INFO - Shutting down all threads...
+2025-07-14 10:30:34,657 - ThreadManager - INFO - All threads shut down
+2025-07-14 10:30:34,660 - GamingHelperApp - INFO - [PANEL] Closing Control Panel...
+2025-07-14 10:30:34,671 - GamingHelperApp - INFO - [ICON] Closing Floating Icon...
+2025-07-14 10:30:34,676 - GamingHelperApp - INFO - [WINDOW] Closing Main Window...
+2025-07-14 10:30:34,688 - GamingHelperApp - INFO - [EXIT] Application shutdown complete

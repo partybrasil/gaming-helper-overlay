@@ -1,4 +1,5 @@
 .gitignore
 gaming-helper-overlay.code-workspace
 __pycache__/
+.vscode/
 .venv/
