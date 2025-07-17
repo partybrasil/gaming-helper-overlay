@@ -1,2 +1,4 @@
-ui/__pycache__/
+.gitignore
+gaming-helper-overlay.code-workspace
 __pycache__/
+.venv/
